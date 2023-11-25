@@ -1,0 +1,403 @@
+
+<meta charset="utf-8">
+
+
+
+<style>
+  .zui-table{
+    border-collapse:collapse;
+
+  }
+  tr td{
+    page-break-inside: avoid;
+    white-space: nowrap;
+}
+.secondheader {
+    font: normal 14px Arial, sans-serif;
+    margin-bottom: 20px;
+    margin-top:40px;
+}
+
+.pageheader {
+    margin-left: 60%!important;
+    font: normal 20px Arial, sans-serif;
+    margin-bottom: 20px;
+}
+
+.zui-table {
+    border: solid 1px #DDEEEE;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font: normal 13px Arial, sans-serif;
+}
+.zui-table thead th {
+    background-color: #DDEFEF;
+    border: solid 1px #DDEEEE;
+    color: #336B6B;
+    padding: 10px;
+    text-align: left;
+    text-shadow: 1px 1px 1px #fff;
+}
+.zui-table tbody td {
+    border: solid 1px #DDEEEE;
+    color: #333;
+    padding: 10px;
+    text-shadow: 1px 1px 1px #fff;
+}
+
+
+#header {
+  font: normal 13px Arial, sans-serif;
+    background-color: #DDEFEF;
+    border: solid 1px #DDEEEE;
+    color: #336B6B;
+    padding: 10px;
+    text-align: left;
+    text-shadow: 1px 1px 1px #fff;
+}
+
+</style>
+
+
+
+<div class="pageheader" ><b>
+Paymentshield {{insurance_type}} Comparison Report</b>
+
+</div>
+
+
+<table class="zui-table" style="display: inline-table;">
+
+    <tbody>
+
+      <tr >
+        <td id="header" >
+
+        Adviser
+      </td>
+
+        <td >
+
+          {{get_client_staff_details['user_name']}} {{get_client_staff_details['surname']}}
+        </td>
+
+   </tr>
+   <tr >
+    <td id="header" >
+
+      Email
+    </td>
+
+    <td >
+
+      {{get_client_staff_details['email']}}
+    </td>
+
+</tr>
+
+
+
+
+    </tbody>
+  </table>
+
+                                <table class="zui-table" style="display: inline-table;">
+ 
+                                  <tbody>
+
+                                    <tr >
+                                      <td id="header" >
+                              
+                                      Customer
+                                    </td>
+                              
+                                      <td >
+                              
+                                        {{client['forname']}} {{client['surname']}}
+                                      </td>
+                              
+                                 </tr>
+                                 {% if client.user_count == 2 %}
+
+                                 <tr >
+                                  <td id="header" >
+                              
+                                    Customer 2
+                                  </td>
+                              
+                                  <td >
+                              
+                                    {{client['second_forname']}} {{client['second_surname']}}
+                                  </td>
+                              
+                              </tr>
+                              
+                              {% endif %}
+
+                              
+                              
+                                  </tbody>
+
+                                  </table>
+
+ 
+
+                                  <div class="secondheader" ><b>
+                                    Product Details
+                                    </b>
+                                    
+                                    </div>
+
+                                    <table class="zui-table" style="display: inline-table;">
+
+                                      <tbody>
+                                  
+                                        <tr >
+                                          <td id="header" >
+                                  
+                                            Cover Type
+                                        </td>
+                                  
+                                          <td >
+                                  
+                                            {{source['CoverType']}} 
+                                          </td>
+                                  
+                                          <td id="header" >
+                                  
+                                            Home Emergency
+                                          </td>
+                                    
+                                            <td >
+                                              {% if source['HomeEmergency'] == 'true' %}
+                                              Yes
+                                              {%else%}
+                                              No
+                                            {% endif %}
+                                            </td>
+                                  
+                                            
+                                    
+                                            <td id="header" >
+                                  
+                                              Legal Expenses
+                                            </td>
+                                      
+                                              <td >
+                                                {% if source['LegalExpenses'] == 'true' %}
+                                                Yes
+                                                {%else%}
+                                                No
+                                              {% endif %}
+                                              </td>
+                                    
+                                    </tr>
+                                    <tr style="margin-top:20px;">
+                                      <td id="header" >
+                                  
+                                        Excess Contents
+                                      </td>
+                                
+                                        <td >
+                                
+                                          {{source['ExcessContents']}} 
+                                        </td>
+                                
+                          
+                                    <td id="header" >
+                                
+                                      Excess Buildings
+                                    </td>
+                                
+                                    <td >
+                                
+                                      {{source['ExcessBuildings']}} 
+                                    </td>
+
+                                
+                               
+                                    <td id="header" >
+                                
+                                      Contents Cover Level
+                                    </td>
+                              
+                                      <td >
+                              
+                                        {{source['ContentsCoverLevel']}} 
+                                      </td>
+                              
+                               
+               
+                                </tr>
+                                <tr style="margin-top:20px;">
+                                  <td id="header" >
+                              
+                                    Buildings Cover Level
+                                  </td>
+                            
+                                    <td >
+                            
+                                      {{source['BuildingsCoverLevel']}} 
+                                    </td>
+                            
+                         
+                                <td id="header" >
+                            
+                                  Accidental Damage Contents
+                                </td>
+                            
+                                <td >
+                            
+                                  {% if source['AccidentalDamageBuildings'] == 'true' %}
+                                  Yes
+                                  {%else%}
+                                  No
+                                {% endif %}
+                                </td>
+                                <td id="header" >
+                            
+                                  Accidental Damage Buildings
+                                </td>
+                            
+                                <td >
+                            
+                                  {% if source['AccidentalDamageBuildings'] == 'true' %}
+                                  Yes
+                                  {%else%}
+                                  No
+                                {% endif %}
+                                  </td>
+                          
+     
+                        
+                          </tr>
+                          <tr style="margin-top:20px!important;">
+                                           
+                          <td id="header" >
+                          
+                            Personal Possessions Total Amount
+                          </td>
+                      
+                          <td >
+                      
+                            {{source['PersonalPossessionsTotalAmount']}} 
+                          </td>
+                          <td id="header" >
+                          
+                          </td>
+                      
+                          <td >
+                      
+                          </td></tr>
+                          {% if source['ContentsSpecifiedItems'] != [] and source['ContentsItemsToSpecify'] != 'false'  %}
+                         {% for item in source['ContentsSpecifiedItems'] %}
+                         <b>{{item['SpecifiedItemType']}}</b>
+                          <tr style="margin-top:20px!important;">
+                                           
+                            <td id="header" >
+                            
+                              Description
+                            </td>
+                        
+                            <td >
+                        
+                              {{item['SpecifiedItemDescription']}} 
+                            </td>
+                            <td id="header" >
+                            Value
+                            </td>
+                        
+                            <td >
+                              {{item['SpecifiedItemValue']}} 
+
+                            </td></tr><hr>
+                            {% endfor %}
+{% endif %}
+
+                                      </tbody>
+                                    </table>
+  
+<table class="zui-table" style="margin-top:20px!important;">
+  
+            <thead>
+
+      <tr>
+
+        <tr>
+
+          <th >Provider</th>
+          <th >Premium</th>
+          <th>Buildings</th>
+          <th>Contents</th>
+
+        </tr>
+
+    </thead>
+
+    <tbody>
+ 
+
+
+      {% for quote_group in quotes %}
+
+      {% for quote in quote_group["Quotes"] %}
+
+      {% if quote['QuoteId'] == ProductCode %}
+      <tr style="background: rgba(151, 201, 130, 0.2)!important;">
+        {% else %}
+        <tr>
+
+        {% endif %}
+
+        <td>
+
+          {{quote['InsurerName']}}
+
+        </td>
+      <td>
+
+  {%for premium in quote["Premiums"]%}
+  {{premium["PriceElements"]["TotalCostPerPaymentPeriod"]}}
+  {% if premium['PaymentFrequency'] == "Monthly3MonthsDeferred" %}
+  Monthly 3 Months Deferred
+  {% elif premium['PaymentFrequency'] == "Monthly2MonthsFree" %}
+  Monthly 2 Months Free
+  {% else %}
+  {{premium["PaymentFrequency"]}}
+  {% endif %}
+
+  <br>
+  {%endfor%}
+</td>
+<td>
+  {% if quote_group["CoverADBuildings"] == "NotApplicable" %}
+  Not Applicable
+  {% else %}
+  {{quote_group["CoverADBuildings"]}}
+  {% endif %}
+
+</td>
+<td>
+
+  {% if quote_group["CoverADContents"] == "NotApplicable" %}
+  Not Applicable
+  {% else %}
+  {{quote_group["CoverADContents"]}}
+  {% endif %}
+
+  </td>
+
+ 
+
+</tr>
+
+
+{% endfor %}
+
+{% endfor %}
+
+
+    </tbody>
+  </table>
+
+

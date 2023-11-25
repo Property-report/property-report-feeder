@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <base href="{{request.url_root}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- css includes -->
+    <link rel="stylesheet" href="{{config.CDN_URL}}/static/assets/css/bootstrap.min.css">
+    <script src="{{config.CDN_URL}}/static/js/optistack_style_loader.js"></script>
+
+
+    <link rel="stylesheet"  type='text/css' href="{{config.CDN_URL}}/static/assets/css/icons.min.css">
+    <link rel="stylesheet"  type='text/css' href="{{config.CDN_URL}}/static/assets/css/theme.min.css">
+
+
+    <script src="{{config.CDN_URL}}/static/assets/js/jquery.min.js"></script>
+
+
+
+  {% block style %}{% endblock %}
+
+
+  <title>{{logoname}}</title>
+  </head>
+    <body>
+      <div id="layout-wrapper">
+
+          <div class="main-content">
+
+
+
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          <ul>
+          {% for message in messages %}
+              <li>{{ message }} </li>
+          {% endfor %}
+          </ul>
+        {% endif %}
+      {% endwith %}
+
+      {% block content %}{% endblock %}
+<!--    {% include '_fragments/footer.html' %} -->
+</div>
+</body>
+
+
+
+    {% block script %}{% endblock %}
+</html>

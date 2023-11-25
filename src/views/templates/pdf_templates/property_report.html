@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" lang="en">
+
+<head>
+  <title></title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% include 'report_parts/style.html' %}
+</head>
+
+
+
+
+<body style="background-color: #FFFFFF; margin: 0; padding: 0; -webkit-text-size-adjust: none; text-size-adjust: none;">
+  <table class="nl-container" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation"
+    style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #ffffff;">
+    <tbody>
+      <tr>
+        <td>
+
+          {% include 'report_parts/title.html' %}
+
+          {% if polygonimage != None %}
+          <!-- START OF POLYGON IMAGE VIEW-->
+          {% include 'report_parts/polygonimage.html' %}
+          <!-- END OF STREET VIEW-->
+          {% endif %}
+
+          {% if streeimagepov != None %}
+          <!-- START OF STREET VIEW-->
+          {% include 'report_parts/streetimage.html' %}
+          <!-- END OF STREET VIEW-->
+          {% endif %}
+
+          <!-- {% if street_image_url != None and street_image_url2 != None and street_image_url3 != None and street_image_url4 != None %} -->
+          <!-- START OF STREET VIEW 2-->
+          <!-- {% include 'report_parts/streetimage2.html' %} -->
+          <!-- END OF STREET VIEW 2-->
+          <!-- {% endif %} -->
+
+          <!-- START OF PROPERTY BOUNDRY DATA-->
+          <!-- NOTE this is what its currently called but actually seems to be title data? -->
+          {% include 'report_parts/property_boundry_data.html' %}
+          <!-- END OF PROPERTY BOUNDRY DATA-->
+
+          <!-- START OF LOCATION-->
+          {% include 'report_parts/location.html' %}
+          <!-- END OF LOCATION-->
+
+          <!-- START OF COUNCIL TAX-->
+          {% include 'report_parts/council_tax.html' %}
+          <!-- END OF COUNCIL TAX-->
+
+          {% if data['epc_data'] != {} %}
+          <!-- START OF AGE BAND-->
+          {% include 'report_parts/age_band.html' %}
+          <!-- END OF AGE BAND-->
+          {% endif %}
+
+          <!-- START OF INTERNET AVAILABILITY-->
+          {% include 'report_parts/internet_availability.html' %}
+          <!-- END OF INTERNET AVAILABILITY-->
+
+          <!-- START OF PRICE HISTORY-->
+          {% include 'report_parts/price_history.html' %}
+          <!-- END OF PRICE HISTORY-->
+
+          {% if data['epc_data'] != {} %}
+          <!-- START OF EPC RATING-->
+          {% include 'report_parts/epc_rating.html' %}
+          <!-- END OF EPC RATING-->
+
+          <!-- START OF EPC DATA-->
+          {% include 'report_parts/epc_data.html' %}
+          <!-- END OF EPC DATA-->
+          {% endif %}
+
+          {% if data['epc_suggestions'] !=[] %}
+          <!-- START OF EPC SUGGESTIONS-->
+          {% include 'report_parts/epc_suggestions.html' %}
+          <!-- END OF EPC SUGGESTIONS-->
+          {% endif %}
+
+          <!-- START OF FLOOD RISK-->
+          {% include 'report_parts/flood_risk.html' %}
+          <!-- END OF FLOOD RISK-->
+
+          <!-- START OF AIR POLUTION-->
+          {% include 'report_parts/air_polution.html' %}
+          <!-- END OF AIR POLUTION-->
+
+          <!-- START OF Estimated Build Cost-->
+          {% include 'report_parts/estimated_build_cost.html' %}
+          <!-- END OF Estimated Build Cost-->
+
+          <!-- START OF RENTAL DEMAND-->
+          {% include 'report_parts/rental_demand.html' %}
+          <!-- END OF RENTAL DEMAND-->
+
+          <!-- START OF AVERAGE RENT-->
+          {% include 'report_parts/average_rent.html' %}
+          <!-- END OF AVERAGE RENT-->
+
+          {% if data['get_polygon_info']['listed_buildigs'] != [] %}
+          <!-- START OF LISTED BUILDINGS-->
+          {% include 'report_parts/listed_buildings.html' %}
+          <!-- END OF LISTED BUILDINGS-->
+          {% endif %}
+
+          {% if historicalflood_image != None %}
+          <!-- START OF POLYGON IMAGE VIEW-->
+          {% include 'report_parts/hisrotical_floods.html' %}
+          <!-- END OF STREET VIEW-->
+          {% endif %}
+
+          {% if data['monthly_crime_rate'] != {} %}
+          <!-- START OF CRIME DATA -->
+          {% include 'report_parts/crime_data.html' %}
+          <!-- END OF CRIME DATA -->
+          {% endif %}
+
+          <!-- START OF TRAIN LINKS -->
+          {% include 'report_parts/train_links.html' %}
+          <!-- END OF TRAIN LINKS-->
+
+          <!-- START OF BUS LINKS -->
+          {% include 'report_parts/bus_links.html' %}
+          <!-- END OF BUS LINKS-->
+
+          {% if tubes == 'True' or tubes == True %}
+          <!-- START OF TUBE LINKS -->
+          {% include 'report_parts/tube_links.html' %}
+          <!-- END OF TUBE LINKS-->
+          {% endif %}
+
+          <!-- START OF GENERAL PRACTITIONERS -->
+          {% include 'report_parts/general_practitioners.html' %}
+          <!-- END OF GENERAL PRACTITIONERS -->
+
+          <!-- START OF DENTISTS -->
+          {% include 'report_parts/dentists.html' %}
+          <!-- END OF STATE SCHOOLS -->
+
+          <!-- START OF INDEPENDENT SCHOOLS -->
+          {% include 'report_parts/independent-schools.html' %}
+          <!-- END OF INDEPENDENT SCHOOLS -->
+
+          <!-- START OF STATE SCHOOLS -->
+          {% include 'report_parts/state-schools.html' %}
+          <!-- END OF STATE SCHOOLS -->
+
+          <!-- START OF SUPERMARKETS -->
+          {% include 'report_parts/supermarkets.html' %}
+          <!-- END OF SUPERMARKETS -->
+
+          <!-- START OF POST OFFICE -->
+          {% include 'report_parts/post_office.html' %}
+          <!-- END OF POST OFFICE -->
+
+          <!-- START OF GYMS -->
+          {% include 'report_parts/gyms.html' %}
+          <!-- END OF GYMS -->
+
+          <!-- START OF RESTARAUNTS -->
+          {% include 'report_parts/restaraunts.html' %}
+          <!-- END OF RESTARAUNTS -->
+
+          <!-- START OF CAFES -->
+          {% include 'report_parts/cafes.html' %}
+          <!-- END OF CAFES -->
+
+          <!-- START OF PLANNING DATA -->
+          {% include 'report_parts/planning_data.html' %}
+
+        </td>
+      </tr>
+    </tbody>
+
+  </table> <!-- END -->
+</body>
+
+</html>

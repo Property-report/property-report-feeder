@@ -1,0 +1,370 @@
+
+<meta charset="utf-8">
+
+
+
+<style>
+  .zui-table{
+    border-collapse:collapse;
+
+  }
+  tr td{
+    page-break-inside: avoid;
+    white-space: nowrap;
+}
+.secondheader {
+    font: normal 14px Arial, sans-serif;
+    margin-bottom: 20px;
+    margin-top:40px;
+}
+
+.pageheader {
+    margin-left: 60%!important;
+    font: normal 20px Arial, sans-serif;
+    margin-bottom: 20px;
+}
+
+.zui-table {
+    border: solid 1px #DDEEEE;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font: normal 13px Arial, sans-serif;
+}
+.zui-table thead th {
+    background-color: #DDEFEF;
+    border: solid 1px #DDEEEE;
+    color: #336B6B;
+    padding: 10px;
+    text-align: left;
+    text-shadow: 1px 1px 1px #fff;
+}
+.zui-table tbody td {
+    border: solid 1px #DDEEEE;
+    color: #333;
+    padding: 10px;
+    text-shadow: 1px 1px 1px #fff;
+}
+
+
+#header {
+  font: normal 13px Arial, sans-serif;
+    background-color: #DDEFEF;
+    border: solid 1px #DDEEEE;
+    color: #336B6B;
+    padding: 10px;
+    text-align: left;
+    text-shadow: 1px 1px 1px #fff;
+}
+
+</style>
+
+
+
+<div class="pageheader" ><b>
+Comparison Report</b>
+
+</div>
+
+<table class="zui-table" style="display: inline-table;">
+
+    <tbody>
+
+      <tr >
+        <td id="header" >
+
+        Adviser
+      </td>
+
+        <td >
+
+          {{get_client_staff_details['user_name']}} {{get_client_staff_details['surname']}}
+        </td>
+
+   </tr>
+   <tr >
+    <td id="header" >
+
+      Email
+    </td>
+
+    <td >
+
+      {{get_client_staff_details['email']}}
+    </td>
+
+</tr>
+
+
+
+
+    </tbody>
+  </table>
+
+                                <table class="zui-table" style="display: inline-table;">
+ 
+                                  <tbody>
+
+                                    <tr >
+                                      <td id="header" >
+                              
+                                      Customer
+                                    </td>
+                              
+                                      <td >
+                              
+                                        {{client['forname']}} {{client['surname']}}
+                                      </td>
+                              
+                                 </tr>
+                                 {% if client.user_count == 2 %}
+
+                                 <tr >
+                                  <td id="header" >
+                              
+                                    Customer 2
+                                  </td>
+                              
+                                  <td >
+                              
+                                    {{client['second_forname']}} {{client['second_surname']}}
+                                  </td>
+                              
+                              </tr>
+                              
+                              {% endif %}
+
+                              
+                              
+                                  </tbody>
+
+                                  </table>
+
+ 
+
+                                  <div class="secondheader" ><b>
+                                    Loan Details
+                                    </b>
+                                    
+                                    </div>
+
+                                    <table class="zui-table" style="display: inline-table;">
+
+                                      <tbody>
+                                  
+                                        <tr >
+                                          <td id="header" >
+                                  
+                                          Product Type
+                                        </td>
+                                  
+                                          <td >
+                                  
+                                            {{source['Type']}} 
+                                          </td>
+                                  
+                                          <td id="header" >
+                                  
+                                            Repayment Method
+                                          </td>
+                                    
+                                            <td >
+                                    
+                                              {{source['RepaymentMethod']}} 
+                                            </td>
+                                  
+                                            
+                                    
+                                      <td id="header" >
+                                  
+                                        Purpose
+                                      </td>
+                                  
+                                      <td >
+                                  
+                                        {{source['Purpose']}} 
+                                      </td>
+                                    </tr>
+                                    <tr style="margin-top:20px;">
+                                      <td id="header" >
+                                  
+                                        Calculation Term
+                                      </td>
+                                
+                                        <td >
+                                
+                                          {{source['CalculationTerm']}} 
+                                        </td>
+                                
+                          
+                                    <td id="header" >
+                                
+                                      Deposit
+                                    </td>
+                                
+                                    <td >
+                                
+                                      {{source['Deposit']}} 
+                                    </td>
+
+                                
+                               
+                                    <td id="header" >
+                                
+                                      First Time Buyer
+                                    </td>
+                              
+                                      <td >
+                              
+                                        {{source['FirstTimeBuyer']}} 
+                                      </td>
+                              
+                               
+               
+                                </tr>
+                                <tr style="margin-top:20px;">
+                                  <td id="header" >
+                              
+                                    LTV
+                                  </td>
+                            
+                                    <td >
+                            
+                                      {{source['LTV']}} 
+                                    </td>
+                            
+                         
+                                <td id="header" >
+                            
+                                  Loan Amount
+                                </td>
+                            
+                                <td >
+                            
+                                  {{source['LoanAmount']}} 
+                                </td>
+                                <td id="header" >
+                            
+                                  Property Value
+                                </td>
+                          
+                                  <td >
+                          
+                                    {{source['PropertyValue']}} 
+                                  </td>
+                          
+     
+                        
+                          </tr>
+                          <tr style="margin-top:20px!important;">
+                                           
+                          <td id="header" >
+                          
+                            Term
+                          </td>
+                      
+                          <td >
+                      
+                            {{source['Years']}} 
+                          </td>
+                          <td id="header" >
+                          
+                            Initial Period
+                          </td>
+                      
+                          <td >
+                      
+                            {{source['InitialPeriod']}} 
+                          </td></tr>
+
+                                      </tbody>
+                                    </table>
+  
+
+<table class="zui-table" style="margin-top:20px!important;">
+  
+            <thead>
+
+      <tr>
+
+
+        <th >Lender</th>
+        <th >Initial Rate</th>
+
+        <th >Product Type</th>
+
+          <th >Initial Period</th>
+          <th > Initial Payment</th>
+          <th >Reverting Rate</th>
+          <th >Reverting Payment</th>
+          <th >APR</th>
+          <th >Total Fees</th>
+          <th >Max.LTV</th>
+          <th >erc</th>
+          <th >Cashback</th>
+          <th >Total To Pay</th>
+
+        </tr>
+    </thead>
+
+    <tbody>
+      {% for quote in quotes %}
+      {% if quote['CalcFields']%}
+
+      {% if quote['CalcFields']['ProductId'] == ProductId %}
+        <tr style="background: rgba(151, 201, 130, 0.2)!important;">
+          {% else %}
+          <tr>
+
+          {% endif %}
+
+        <td>
+          
+          {% if quote['GridViewType'] %}
+          {{quote['GridViewType']['ProviderName']}}
+        
+          {% endif %}
+        </td>
+
+
+
+          <td >
+
+
+
+            {{quote['CalcFields']['InitialInterestRate']}}%
+  
+  
+           </td>
+
+           
+        <td >
+
+
+
+          {{quote['CalcFields']['InitialInterestType']}}
+
+
+         </td>
+        <td >{{quote['InitialInterestPeriodDate']}}</td>
+        <td >£{{quote['CalcFields']['InitialMonthlyPayment']}}</td>
+        <td >
+          {{quote['CalcFields']['FollowOnInterestRate']}}%</td>
+        <td >£{{quote['CalcFields']['FollowOnMonthlyPayment']}} </td>
+        <td >{{quote['CalcFields']['APR']}}%</td>
+        <td >£{{quote['CalcFields']['TotalFees']}}</td>
+        <td >{{quote['CalcFields']['MaxLTV']}}%</td>
+        <td >{{quote['CalcFields']['ERC']}}</td>
+        <td >£{{quote['CalcFields']['Cashback']}}</td>
+
+        <td >£{{quote['CalcFields']['TotalToPay']}}</td>
+
+
+
+      </tr>
+      {% endif %}
+
+{% endfor %}
+    </tbody>
+  </table>
+
+

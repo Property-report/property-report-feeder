@@ -1,0 +1,143 @@
+<div class="row row-2" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation"
+    style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; color: #000000; width: 1400px!important;background-color: #f5f7fa;border-radius: 0.8rem;border: 1px solid #e9edf3;border-bottom: 18px solid #FFFFFF; border-left: 25px solid #FFFFFF;  border-top: 18px solid #FFFFFF;page-break-inside: avoid !important;">
+
+    <table class="icons_block block-1" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation"
+        style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+        <tr>
+            <td class="pad"
+                style="vertical-align: middle; color: #333d63; font-family: Georgia, Times, 'Times New Roman', serif; font-size: 35px!important; padding-left: 20px; text-align: left;padding-top:10px;">
+                <table width="100%" cellpadding="0" cellspacing="0" role="presentation"
+                    style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                    <tr>
+                        <td class="alignment" style="vertical-align: middle; text-align: left;">
+                            <!--[if vml]><table align="left" cellpadding="0" cellspacing="0" role="presentation" style="display:inline-block;padding-left:0px;padding-right:0px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;"><![endif]-->
+                            <!--[if !vml]><!-->
+                            <table class="icons-inner"
+                                style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; display: inline-block; margin-right: -4px; padding-left: 0px; padding-right: 0px;"
+                                cellpadding="0" cellspacing="0" role="presentation">
+                                <!--<![endif]-->
+                                <tr>
+                                    <td
+                                        style="vertical-align: middle; text-align: center; padding-top: 5px; padding-bottom: 5px; padding-left: 5px; padding-right: 15px;">
+                                        <img class="icon" alt="AIR POLUTION" src="{{air_polution}}" height="40"
+                                            width="80" align="center"
+                                            style="display: block; height: auto; margin: 0 auto; border: 0;">
+                                    </td>
+                                    <td
+                                        style="font-family: Georgia, Times, 'Times New Roman', serif; font-size: 35px!important; color: #333d63; vertical-align: middle; letter-spacing: undefined; text-align: left;">
+                                        AIR POLUTION</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <table class="divider_block block-2" width="90%" border="0" cellpadding="10" cellspacing="0" role="presentation"
+        style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+        <tr>
+            <td class="pad">
+                <div class="alignment" align="left">
+                    <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%"
+                        style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                        <tr>
+                            <td class="divider_inner"
+                                style="font-size: 1px; line-height: 1px; border-top: 1px solid #0057B7;">
+                                <span>&#8202;</span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <table class="text_block block-3" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation"
+        style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;padding-left:65px;">
+        <tr>
+            <td class="pad" style="padding-bottom:10px;padding-left:15px;padding-right:15px;padding-top:15px;">
+                <div style="font-family: Georgia, Times, 'Times New Roman', serif; ">
+                    <div
+                        style="font-size: 18px; mso-line-height-alt: 14.399999999999999px; color: #000000; line-height: 1.2; font-family: Georgia, Times, Times New Roman, serif;">
+                        <table class="table table-striped" id="tabledesign">
+
+                            <tbody>
+                                <tr>
+                                    <td>Air Quality: </td>
+                                    <td>
+                                        {% if data['air_pollution']['list'][0]['main']['aqi'] == 1 or
+                                        data['air_pollution']['list'][0]['main']['aqi'] == '1' %}
+
+                                        <b style="color:#0c9444">
+                                            Good
+                                        </b>
+                                        {% elif data['air_pollution']['list'][0]['main']['aqi'] == 2 or
+                                        data['air_pollution']['list'][0]['main']['aqi'] == '2' %}
+                                        <b style="color:#2bb573">
+                                            Fair
+                                        </b>
+                                        {% elif data['air_pollution']['list'][0]['main']['aqi'] == 3 or
+                                        data['air_pollution']['list'][0]['main']['aqi'] == '3' %}
+                                        <b style="color:#8ec63f"> Moderate</b>
+                                        {% elif data['air_pollution']['list'][0]['main']['aqi'] == 4 or
+                                        data['air_pollution']['list'][0]['main']['aqi'] == '4' %}
+                                        <b style="color:#f6941c"> Poor </b>
+                                        {% elif data['air_pollution']['list'][0]['main']['aqi'] == 5 or
+                                        data['air_pollution']['list'][0]['main']['aqi'] == '5' %}
+                                        <b style="color:#ed1a25">Very Poor </b>
+                                        {% endif %}
+
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+
+                        <p><u>Breakdown</u></p>
+
+
+                        <table class="table table-striped" id="tabledesign">
+                            <tbody>
+                                <tr>
+                                    <td>Carbon monoxide: </td>
+                                    <td>{{data['air_pollution']['list'][0]['components']['co']}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Nitrogen monoxide: </td>
+                                    <td>{{data['air_pollution']['list'][0]['components']['no']}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Nitrogen dioxide: </td>
+                                    <td>{{data['air_pollution']['list'][0]['components']['no2']}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Ozone: </td>
+                                    <td>{{data['air_pollution']['list'][0]['components']['o3']}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Sulphur dioxide: </td>
+                                    <td>{{data['air_pollution']['list'][0]['components']['so2']}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Fine particles matter: </td>
+                                    <td>{{data['air_pollution']['list'][0]['components']['pm2_5']}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Coarse particulate matter: </td>
+                                    <td>{{data['air_pollution']['list'][0]['components']['pm10']}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Ammonia: </td>
+                                    <td>{{data['air_pollution']['list'][0]['components']['nh3']}}</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                        <br><br>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>

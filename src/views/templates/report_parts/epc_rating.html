@@ -1,0 +1,297 @@
+<div class="row row-2" align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation"
+    style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; color: #000000; width: 1400px!important;background-color: #f5f7fa;border-radius: 0.8rem;border: 1px solid #e9edf3;border-bottom: 18px solid #FFFFFF; border-left: 25px solid #FFFFFF;  border-top: 18px solid #FFFFFF;page-break-inside: avoid !important;">
+
+
+    <table class="icons_block block-1" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation"
+        style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+        <tr>
+            <td class="pad"
+                style="vertical-align: middle; color: #333d63; font-family: Georgia, Times, 'Times New Roman', serif; font-size: 35px!important; padding-left: 20px; text-align: left;padding-top:10px;">
+                <table width="100%" cellpadding="0" cellspacing="0" role="presentation"
+                    style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                    <tr>
+                        <td class="alignment" style="vertical-align: middle; text-align: left;">
+                            <!--[if vml]><table align="left" cellpadding="0" cellspacing="0" role="presentation" style="display:inline-block;padding-left:0px;padding-right:0px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;"><![endif]-->
+                            <!--[if !vml]><!-->
+                            <table class="icons-inner"
+                                style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; display: inline-block; margin-right: -4px; padding-left: 0px; padding-right: 0px;"
+                                cellpadding="0" cellspacing="0" role="presentation">
+                                <!--<![endif]-->
+                                <tr>
+                                    <td
+                                        style="vertical-align: middle; text-align: center; padding-top: 5px; padding-bottom: 5px; padding-left: 5px; padding-right: 15px;">
+                                        <img class="icon" alt="epc" src="{{epcrating}}" height="40" width="80"
+                                            align="center"
+                                            style="display: block; height: auto; margin: 0 auto; border: 0;">
+                                    </td>
+                                    <td
+                                        style="font-family: Georgia, Times, 'Times New Roman', serif; font-size: 35px!important; color: #333d63; vertical-align: middle; letter-spacing: undefined; text-align: left;">
+                                        EPC RATING</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <table class="divider_block block-2" width="90%" border="0" cellpadding="10" cellspacing="0" role="presentation"
+        style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+        <tr>
+            <td class="pad">
+                <div class="alignment" align="left">
+                    <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%"
+                        style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                        <tr>
+                            <td class="divider_inner"
+                                style="font-size: 1px; line-height: 1px; border-top: 1px solid #0057B7;">
+                                <span>&#8202;</span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <table class="text_block block-3" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation"
+        style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;padding-left: 100px;padding-bottom: 20px;">
+
+        <tr>
+            <td class="pad" style="padding-bottom:10px;padding-left:15px;padding-right:15px;padding-top:15px;">
+                <div style="font-family: Georgia, Times, 'Times New Roman', serif; ">
+                    <div
+                        style="font-size: 18px; mso-line-height-alt: 14.399999999999999px; color: #000000; line-height: 1.2; font-family: Georgia, Times, Times New Roman, serif;">
+                        <div class="epc-data_dataItemsContainer">
+        <tr>
+            {% if data['epc_data']['current-energy-rating'] == 'E' %}
+            <td>
+                <div class="epc-data-item_iconContainer" style="background-color:#fcb041">
+                    <div class="epc-large-letter_letter">E</div>
+                </div>
+            </td>
+            <td>
+                <div class="epc-data-item_infoContainer">
+                    <div class="epc-data-item_infoContainer__label">Current</div>
+                    <div class="epc-data-item_infoContainer__data">
+                        <div class="epc-data-item_infoContainer__dataValue">{{
+                            data['epc_data']['current-energy-efficiency'] }}</div>
+                        <div class="epc-data-item_infoContainer__dataUnits">energy rating</div>
+                    </div>
+                </div>
+            </td>
+
+            {% elif data['epc_data']['current-energy-rating'] == 'F' %}
+            <td>
+                <div class="epc-data-item_iconContainer" style="background-color:#f6941c">
+                    <div class="epc-large-letter_letter">F</div>
+                </div>
+            </td>
+            <td>
+                <div class="epc-data-item_infoContainer">
+                    <div class="epc-data-item_infoContainer__label">Current</div>
+                    <div class="epc-data-item_infoContainer__data">
+                        <div class="epc-data-item_infoContainer__dataValue">{{
+                            data['epc_data']['current-energy-efficiency'] }}</div>
+                        <div class="epc-data-item_infoContainer__dataUnits">energy rating</div>
+                    </div>
+                </div>
+            </td>
+
+            {% elif data['epc_data']['current-energy-rating'] == 'D' %}
+            <td>
+                <div class="epc-data-item_iconContainer" style="background-color:#f6ee30">
+                    <div class="epc-large-letter_letter">D<div>
+                        </div>
+            </td>
+            <td>
+                <div class="epc-data-item_infoContainer">
+                    <div class="epc-data-item_infoContainer__label">Current</div>
+                    <div class="epc-data-item_infoContainer__data">
+                        <div class="epc-data-item_infoContainer__dataValue">{{
+                            data['epc_data']['current-energy-efficiency'] }}</div>
+                        <div class="epc-data-item_infoContainer__dataUnits">energy rating</div>
+                    </div>
+                </div>
+            </td>
+
+            {% elif data['epc_data']['current-energy-rating'] == 'G' %}
+            <td>
+                <div class="epc-data-item_iconContainer" style="background-color:#ed1a25">
+                    <div class="epc-large-letter_letter">E</div>
+                </div>
+            </td>
+            <td>
+                <div class="epc-data-item_infoContainer">
+                    <div class="epc-data-item_infoContainer__label">Current</div>
+                    <div class="epc-data-item_infoContainer__data">
+                        <div class="epc-data-item_infoContainer__dataValue">{{
+                            data['epc_data']['current-energy-efficiency'] }}</div>
+                        <div class="epc-data-item_infoContainer__dataUnits">energy rating</div>
+                    </div>
+                </div>
+            </td>
+            {% elif data['epc_data']['current-energy-rating'] == 'B' %}
+            <td>
+                <div class="epc-data-item_iconContainer" style="background-color:#2bb573">
+                    <div class="epc-large-letter_letter">B</div>
+                </div>
+            </td>
+            <td>
+                <div class="epc-data-item_infoContainer">
+                    <div class="epc-data-item_infoContainer__label">Current</div>
+                    <div class="epc-data-item_infoContainer__data">
+                        <div class="epc-data-item_infoContainer__dataValue">{{
+                            data['epc_data']['current-energy-efficiency'] }}</div>
+                        <div class="epc-data-item_infoContainer__dataUnits">energy rating</div>
+                    </div>
+                </div>
+            </td>
+            {% elif data['epc_data']['current-energy-rating'] == 'C' %}
+            <td>
+                <div class="epc-data-item_iconContainer" style="background-color:#8ec63f">
+                    <div class="epc-large-letter_letter">C</div>
+                </div>
+            </td>
+            <td>
+                <div class="epc-data-item_infoContainer">
+                    <div class="epc-data-item_infoContainer__label">Current</div>
+                    <div class="epc-data-item_infoContainer__data">
+                        <div class="epc-data-item_infoContainer__dataValue">{{
+                            data['epc_data']['current-energy-efficiency'] }}</div>
+                        <div class="epc-data-item_infoContainer__dataUnits">energy rating</div>
+                    </div>
+                </div>
+            </td>
+
+            {% elif data['epc_data']['current-energy-rating'] == 'A' %}
+            <td>
+                <div class="epc-data-item_iconContainer" style="background-color:#0c9444">
+                    <div class="epc-large-letter_letter">A</div>
+                </div>
+            </td>
+            <td>
+                <div class="epc-data-item_infoContainer">
+                    <div class="epc-data-item_infoContainer__label">Current</div>
+                    <div class="epc-data-item_infoContainer__data">
+                        <div class="epc-data-item_infoContainer__dataValue">{{
+                            data['epc_data']['current-energy-efficiency'] }}</div>
+                        <div class="epc-data-item_infoContainer__dataUnits">energy rating</div>
+                    </div>
+                </div>
+            </td>
+
+            {% endif %}
+
+            {% if data['epc_data']['potential-energy-rating'] == 'A' %}
+            <td>
+                <div class="epc-data-item_iconContainer" style="background-color:#0c9444">
+                    <div class="epc-large-letter_letter">A</div>
+                </div>
+            </td>
+            <td>
+                <div class="epc-data-item_infoContainer">
+                    <div class="epc-data-item_infoContainer__label">Potential</div>
+                    <div class="epc-data-item_infoContainer__data">
+                        <div class="epc-data-item_infoContainer__dataValue">{{
+                            data['epc_data']['potential-energy-efficiency'] }}</div>
+                        <div class="epc-data-item_infoContainer__dataUnits">energy rating</div>
+                    </div>
+                </div>
+            </td>
+
+
+            {% elif data['epc_data']['potential-energy-rating'] == 'B' %}
+            <td>
+                <div class="epc-data-item_iconContainer" style="background-color:#2bb573">
+                    <div class="epc-large-letter_letter">B</div>
+                </div>
+            </td>
+            <td>
+                <div class="epc-data-item_infoContainer">
+                    <div class="epc-data-item_infoContainer__label">Potential</div>
+                    <div class="epc-data-item_infoContainer__data">
+                        <div class="epc-data-item_infoContainer__dataValue">{{
+                            data['epc_data']['potential-energy-efficiency'] }}</div>
+                        <div class="epc-data-item_infoContainer__dataUnits">energy rating</div>
+                    </div>
+                </div>
+            </td>
+
+            {% elif data['epc_data']['potential-energy-rating'] == 'C' %}
+            <td>
+                <div class="epc-data-item_iconContainer" style="background-color:#8ec63f">
+                    <div class="epc-large-letter_letter">C</div>
+                </div>
+            </td>
+            <td>
+                <div class="epc-data-item_infoContainer">
+                    <div class="epc-data-item_infoContainer__label">Potential</div>
+                    <div class="epc-data-item_infoContainer__data">
+                        <div class="epc-data-item_infoContainer__dataValue">{{
+                            data['epc_data']['potential-energy-efficiency'] }}</div>
+                        <div class="epc-data-item_infoContainer__dataUnits">energy rating</div>
+                    </div>
+                </div>
+            </td>
+
+            {% elif data['epc_data']['potential-energy-rating'] == 'D' %}
+            <td>
+                <div class="epc-data-item_iconContainer" style="background-color:#f6ee30">
+                    <div class="epc-large-letter_letter">D<div>
+                        </div>
+            </td>
+            <td>
+                <div class="epc-data-item_infoContainer">
+                    <div class="epc-data-item_infoContainer__label">Potential</div>
+                    <div class="epc-data-item_infoContainer__data">
+                        <div class="epc-data-item_infoContainer__dataValue">{{
+                            data['epc_data']['potential-energy-efficiency'] }}</div>
+                        <div class="epc-data-item_infoContainer__dataUnits">energy rating</div>
+                    </div>
+                </div>
+            </td>
+
+            {% elif data['epc_data']['potential-energy-rating'] == 'E' %}
+            <td>
+                <div class="epc-data-item_iconContainer" style="background-color:#fcb041">
+                    <div class="epc-large-letter_letter">A</div>
+                </div>
+            </td>
+            <td>
+                <div class="epc-data-item_infoContainer">
+                    <div class="epc-data-item_infoContainer__label">Potential</div>
+                    <div class="epc-data-item_infoContainer__data">
+                        <div class="epc-data-item_infoContainer__dataValue">{{
+                            data['epc_data']['potential-energy-efficiency'] }}</div>
+                        <div class="epc-data-item_infoContainer__dataUnits">energy rating</div>
+                    </div>
+                </div>
+            </td>
+
+            {% elif data['epc_data']['potential-energy-rating'] == 'F' %}
+            <td>
+                <div class="epc-data-item_iconContainer" style="background-color:#f6941c">
+                    <div class="epc-large-letter_letter">F</div>
+                </div>
+            </td>
+            <td>
+                <div class="epc-data-item_infoContainer">
+                    <div class="epc-data-item_infoContainer__label">Potential</div>
+                    <div class="epc-data-item_infoContainer__data">
+                        <div class="epc-data-item_infoContainer__dataValue">{{
+                            data['epc_data']['potential-energy-efficiency'] }}</div>
+                        <div class="epc-data-item_infoContainer__dataUnits">energy rating</div>
+                    </div>
+                </div>
+            </td>
+            {% endif %}
+        </tr>
+</div>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>

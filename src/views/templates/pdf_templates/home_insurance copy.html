@@ -1,0 +1,2052 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width"/>
+	<title>{{formdata['insurance_type'] | replace("_", " ")}} Quote</title>
+	<style type="text/css">
+        .center{
+              margin-left: auto;
+              margin-right: auto;
+            }
+              table{
+                font-family: 'Poppins', sans-serif;
+              }
+              .table {
+            width: 100%;
+            margin-bottom: 1rem;
+            color: #212529;
+            }
+            
+            .table th,
+            .table td {
+            padding: 0.75rem;
+            vertical-align: top;
+            border-top: 1px solid #dee2e6;
+            }
+            
+            .table thead th {
+            vertical-align: bottom;
+            border-bottom: 2px solid #dee2e6;
+            }
+            
+            .table tbody + tbody {
+            border-top: 2px solid #dee2e6;
+            }
+            
+            .table-sm th,
+            .table-sm td {
+            padding: 0.3rem;
+            }
+            
+            .table-bordered {
+            border: 1px solid #dee2e6;
+            }
+            table[class=fullCenter] {width: 100%!important; text-align: center!important; clear: both; }
+            
+            .table-bordered th,
+            .table-bordered td {
+            border: 1px solid #dee2e6;
+            }
+            
+            .table-bordered thead th,
+            .table-bordered thead td {
+            border-bottom-width: 2px;
+            }
+            
+            .table-borderless th,
+            .table-borderless td,
+            .table-borderless thead th,
+            .table-borderless tbody + tbody {
+            border: 0;
+            }
+            
+            .table-striped tbody tr:nth-of-type(odd) {
+            background-color: rgba(0, 0, 0, 0.05);
+            }
+            
+            .table-hover tbody tr:hover {
+            color: #212529;
+            background-color: rgba(0, 0, 0, 0.075);
+            }
+            
+            .table-primary,
+            .table-primary > th,
+            .table-primary > td {
+            background-color: #b8daff;
+            }
+            
+            .table-primary th,
+            .table-primary td,
+            .table-primary thead th,
+            .table-primary tbody + tbody {
+            border-color: #7abaff;
+            }
+            
+            .table-hover .table-primary:hover {
+            background-color: #9fcdff;
+            }
+            
+            .table-hover .table-primary:hover > td,
+            .table-hover .table-primary:hover > th {
+            background-color: #9fcdff;
+            }
+            
+            .table-secondary,
+            .table-secondary > th,
+            .table-secondary > td {
+            background-color: #d6d8db;
+            }
+            
+            .table-secondary th,
+            .table-secondary td,
+            .table-secondary thead th,
+            .table-secondary tbody + tbody {
+            border-color: #b3b7bb;
+            }
+            
+            .table-hover .table-secondary:hover {
+            background-color: #c8cbcf;
+            }
+            
+            .table-hover .table-secondary:hover > td,
+            .table-hover .table-secondary:hover > th {
+            background-color: #c8cbcf;
+            }
+            
+            .table-success,
+            .table-success > th,
+            .table-success > td {
+            background-color: #c3e6cb;
+            }
+            
+            .table-success th,
+            .table-success td,
+            .table-success thead th,
+            .table-success tbody + tbody {
+            border-color: #8fd19e;
+            }
+            
+            .table-hover .table-success:hover {
+            background-color: #b1dfbb;
+            }
+            
+            .table-hover .table-success:hover > td,
+            .table-hover .table-success:hover > th {
+            background-color: #b1dfbb;
+            }
+            
+            .table-info,
+            .table-info > th,
+            .table-info > td {
+            background-color: #bee5eb;
+            }
+            
+            .table-info th,
+            .table-info td,
+            .table-info thead th,
+            .table-info tbody + tbody {
+            border-color: #86cfda;
+            }
+            
+            .table-hover .table-info:hover {
+            background-color: #abdde5;
+            }
+            
+            .table-hover .table-info:hover > td,
+            .table-hover .table-info:hover > th {
+            background-color: #abdde5;
+            }
+            
+            .table-warning,
+            .table-warning > th,
+            .table-warning > td {
+            background-color: #ffeeba;
+            }
+            
+            .table-warning th,
+            .table-warning td,
+            .table-warning thead th,
+            .table-warning tbody + tbody {
+            border-color: #ffdf7e;
+            }
+            
+            .table-hover .table-warning:hover {
+            background-color: #ffe8a1;
+            }
+            
+            .table-hover .table-warning:hover > td,
+            .table-hover .table-warning:hover > th {
+            background-color: #ffe8a1;
+            }
+            
+            .table-danger,
+            .table-danger > th,
+            .table-danger > td {
+            background-color: #f5c6cb;
+            }
+            
+            .table-danger th,
+            .table-danger td,
+            .table-danger thead th,
+            .table-danger tbody + tbody {
+            border-color: #ed969e;
+            }
+            
+            .table-hover .table-danger:hover {
+            background-color: #f1b0b7;
+            }
+            
+            .table-hover .table-danger:hover > td,
+            .table-hover .table-danger:hover > th {
+            background-color: #f1b0b7;
+            }
+            
+            .table-light,
+            .table-light > th,
+            .table-light > td {
+            background-color: #fdfdfe;
+            }
+            
+            .table-light th,
+            .table-light td,
+            .table-light thead th,
+            .table-light tbody + tbody {
+            border-color: #fbfcfc;
+            }
+            
+            .table-hover .table-light:hover {
+            background-color: #ececf6;
+            }
+            
+            .table-hover .table-light:hover > td,
+            .table-hover .table-light:hover > th {
+            background-color: #ececf6;
+            }
+            
+            .table-dark,
+            .table-dark > th,
+            .table-dark > td {
+            background-color: #c6c8ca;
+            }
+            
+            .table-dark th,
+            .table-dark td,
+            .table-dark thead th,
+            .table-dark tbody + tbody {
+            border-color: #95999c;
+            }
+            
+            .table-hover .table-dark:hover {
+            background-color: #b9bbbe;
+            }
+            
+            .table-hover .table-dark:hover > td,
+            .table-hover .table-dark:hover > th {
+            background-color: #b9bbbe;
+            }
+            
+            .table-active,
+            .table-active > th,
+            .table-active > td {
+            background-color: rgba(0, 0, 0, 0.075);
+            }
+            
+            .table-hover .table-active:hover {
+            background-color: rgba(0, 0, 0, 0.075);
+            }
+            
+            .table-hover .table-active:hover > td,
+            .table-hover .table-active:hover > th {
+            background-color: rgba(0, 0, 0, 0.075);
+            }
+            .table .thead-color th {
+            color: #fff;
+            background-color: rgb(45, 110, 175);
+            border-color: #508ac4;
+            }
+            .table .thead-dark th {
+            color: #fff;
+            background-color: #875791;
+            border-color: #875791;
+            }
+            
+            .table .thead-light th {
+            color: #495057;
+            background-color: #e9ecef;
+            border-color: #dee2e6;
+            }
+            
+            .table-dark {
+            color: #fff;
+            background-color: #343a40;
+            }
+            
+            .table-dark th,
+            .table-dark td,
+            .table-dark thead th {
+            border-color: #454d55;
+            }
+            
+            .table-dark.table-bordered {
+            border: 0;
+            }
+            
+            .table-dark.table-striped tbody tr:nth-of-type(odd) {
+            background-color: rgba(255, 255, 255, 0.05);
+            }
+            
+            .table-dark.table-hover tbody tr:hover {
+            color: #fff;
+            background-color: rgba(255, 255, 255, 0.075);
+            }
+            
+            
+            @media (max-width: 767.98px) {
+            .table-responsive-md {
+            display: block;
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            }
+            .table-responsive-md > .table-bordered {
+            border: 0;
+            }
+            }
+            
+            @media (max-width: 991.98px) {
+            .table-responsive-lg {
+            display: block;
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            }
+            .table-responsive-lg > .table-bordered {
+            border: 0;
+            }
+            }
+            
+            @media (max-width: 1199.98px) {
+            .table-responsive-xl {
+            display: block;
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            }
+            .table-responsive-xl > .table-bordered {
+            border: 0;
+            }
+            }
+            
+            .table-responsive {
+            display: block;
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            }
+            
+            .table-responsive > .table-bordered {
+            border: 0;
+            }
+            
+            .table-responsive {
+            display: block;
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            }
+            
+            .table-responsive > .table-bordered {
+            border: 0;
+            }
+        
+        
+                /*////// RESET STYLES //////*/
+                body{height:100% !important; margin:0; padding:0; width:100% !important;}
+                table{border-collapse:separate;}
+                img, a img{border:0; outline:none; text-decoration:none;}
+                h1, h2, h3, h4, h5, h6{margin:0; padding:0;}
+                p{margin: 1em 0;}
+        
+                /*////// CLIENT-SPECIFIC STYLES //////*/
+                .ReadMsgBody{width:100%;} .ExternalClass{width:100%;}
+                .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div{line-height:100%;}
+                table, td{mso-table-lspace:0pt; mso-table-rspace:0pt;}
+                #outlook a{padding:0;}
+                img{-ms-interpolation-mode: bicubic;}
+                body, table, td, p, a, li, blockquote{-ms-text-size-adjust:100%; -webkit-text-size-adjust:100%;}
+        
+                /*////// GENERAL STYLES //////*/
+                img{ max-width: 100%; height: auto; }
+                .image1-290 { margin-left:45%;width: 100% !important; max-width: 550px !important; }
+
+                /*////// TABLET STYLES //////*/
+        
+                @media only screen and (max-width: 620px) {
+                .shrink_font{
+                    font-size: 62px;
+                }
+                /*////// GENERAL STYLES //////*/
+                    #foxeslab-email .table1 { width: 90% !important;}
+                    #foxeslab-email .table1-2 { width: 98% !important; margin-left: 1%; margin-right: 1%;}
+                    #foxeslab-email .table1-3 { width: 98% !important; margin-left: 1%; margin-right: 1%;}
+                    #foxeslab-email .table1-4 { width: 98% !important; margin-left: 1%; margin-right: 1%;}
+                    #foxeslab-email .table1-5 { width: 90% !important; margin-left: 5%; margin-right: 5%;}
+        
+                    #foxeslab-email .tablet_no_float { clear: both; width: 100% !important; margin: 0 auto !important; text-align: center !important; }
+                    #foxeslab-email .tablet_wise_float { clear: both; float: none !important; width: auto !important; margin: 0 auto !important; text-align: center !important; }
+        
+                    #foxeslab-email .tablet_hide { display: none !important; }
+        
+                    #foxeslab-email .image1 { width: 98% !important; }
+                    .image1-290 { margin-left:45%;width: 100% !important; max-width: 550px !important; }
+        
+                    .center_content{ text-align: center !important; }
+                    .center_image{ margin: 0 auto !important; }
+                    .center_button{ width: 50% !important;margin-left: 25% !important;max-width: 250px !important; }
+                    .centerize{margin: 0 auto !important;}
+                }
+        
+        
+        
+            </style>
+</head>
+
+<body style="padding: 0;margin: 0;" id="foxeslab-email">
+
+<!-- section-2 -->
+
+
+<!-- section-14 -->
+<table class="table_full editable-bg-color bg_color_ffffff editable-bg-image" bgcolor="#ffffff" width="100%" align="center"  mc:repeatable="castellab" mc:variant="Header" cellspacing="0" cellpadding="0" border="0"  style="background-image: url(#); background-position: top center; background-repeat: no-repeat; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;" background="#">
+	<!-- padding-top -->
+	<tr><td height="60"></td></tr>
+	<tr>
+		<td>
+			<table class="table1" width="600" align="center" border="0" cellspacing="0" cellpadding="0" style="margin: 0 auto;">
+				<!-- row-1 -->
+
+
+				<!-- row-2 -->
+				<tr>
+					<td>
+						<!-- column-2  -->
+						<table class="table1" width="100%" align="center" border="0" cellspacing="0" cellpadding="0" style="margin-left:15%!important;">
+							<tr>
+								<td class="editable-img" align="center">
+										<img editable="true" mc:edit="image1402" class="image1-290" src="{{configurl}}/renewal_image.jpg" style="margin-left:15%!important;display:block; line-height:0; font-size:0; border:0;" border="0" alt="" />
+								</td>
+							</tr>
+							<!-- margin-bottom -->
+							<tr><td height="10"></td></tr>
+						</table><!-- END column-2 -->
+					</td>
+				</tr><!-- END row-2 -->
+
+
+
+				<!-- row-4 -->
+
+				<!-- padding-bottom -->
+				<tr><td height="10"></td></tr>
+			</table><!-- END container -->
+		</td>
+	</tr>
+</table><!-- END wrapper -->
+
+
+<!-- section-17 -->
+
+<table width="800" border="0" cellpadding="0" cellspacing="0" align="center" class="row" style="width:800px;max-width:800px; margin-left:5%;">
+	<tr>
+		<td align="center" valign="top" class="container-padding">
+
+<!--[if (gte mso 9)|(IE)]><table border="0" cellpadding="0" cellspacing="0"><tr><td valign="top"><![endif]-->
+
+<!-- column -->
+<table width="800" border="0" cellpadding="0" cellspacing="0" align="left" class="row" style="width:550px!important;max-width:550pximportant;border-collapse:collapse;">
+
+	<tr>
+		<td class="column-bg-color-b" valign="top" align="center"  bgcolor="#FFFFFF">
+<!-- content -->
+<table width="800" border="0" cellpadding="0" cellspacing="0" align="center" class="row" style="width:550pximportant;max-width:550pximportant;">
+	<tr>
+		<td align="center" valign="top" class="container-padding">
+
+			<table class="table1" width="800" align="center" border="0" cellspacing="0" cellpadding="0" style="margin: 0 auto;">
+				<!-- padding-top -->
+				<tr><td height="20"></td></tr>
+				<tr>
+					<td mc:edit="text1701" align="center" class="text_color_282828" style="color: #282828; font-size: 18px; font-weight: 500; font-family: Raleway, Helvetica, sans-serif; mso-line-height-rule: exactly;">
+						<div class="editable-text">
+							<span class="text_container">
+								{{formdata['company_intro1']}}
+                
+
+                            
+                            </span>
+						</div>
+					</td>
+				</tr>
+
+				<!-- horizontal gap -->
+				<tr><td height="10"></td></tr>
+
+				<!-- details -->
+				<!-- padding-top -->
+				<tr><td height="10"></td></tr>
+			</table><!-- END container -->
+		</td>
+	</tr>
+</table><!-- END wrapper -->
+</td>
+</tr>
+</table><!-- END wrapper -->
+</td>
+</tr>
+</table>
+
+
+
+<!-- test -->
+<table class="row" border="0" align="left" cellpadding="0" cellspacing="0">
+    <tbody><tr>
+        <td height="10" align="center" valign="top" style="font-size:20px;line-height:20px;">&nbsp;</td>
+    </tr>
+</tbody></table>
+
+<table mc:hideable="" class="bodyBgColor" width="100%" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" style="width:100%;max-width:100%;">
+	<tbody><tr>
+		<td align="center" valign="top">
+
+			<table class="row" width="800px" border="0" align="center" cellpadding="0" cellspacing="0" style="width:800px;max-width:800px;">
+				<tbody>
+                    {% if formdata['insurance_type'] == "home_insurance" %}
+
+
+					<tr>
+						<td data-bgcolor="Inner Background Color" class="whiteBgcolor" align="center" valign="top" bgcolor="#FFFFFF">
+				
+							<table class="row" width="800px" border="0" align="center" cellpadding="0" cellspacing="0" style="width:800px;max-width:800px;">
+								<tbody><tr>
+									<td height="30" align="center" valign="top" style="font-size:30px;line-height:30px;">&nbsp;</td>
+								</tr>
+								<tr>
+									<td align="left" valign="top" style="font-size:0;padding:0; border:1px solid #CD7F32; border-radius: 6px;">
+				
+										<div class="row" style="display:inline-block!important;max-width:330px;vertical-align:top;width:100%">
+											<table data-bgcolor="Table-1 BG Color" width="330" class="row" border="0" align="left" cellpadding="0" cellspacing="0" style="padding-left: 10px; padding-right: 10px;" bgcolor="#CD7F32">
+												<tbody>
+				
+												<tr>
+													<td align="center" valign="middle" height="30" style="font-size:30px;line-height:30px;">&nbsp;</td>
+												</tr>
+				
+												<tr>
+													<td mc:edit="text1901" class="text_color_282828" align="center" style="color: #282828; font-size: 18px; font-weight: 700; font-family: 'Open Sans', Helvetica, sans-serif; mso-line-height-rule: exactly; text-decoration: underline;">
+														<div class="editable-text">
+															<span class="text_container">BRONZE</span>
+														</div>
+													</td>
+												</tr>
+												<!-- horizontal gap -->
+												<tr><td height="5"></td></tr>
+												<tr>
+													<td mc:edit="text1902" align="center" class="text_color_282828" style="color: #282828;line-height: 1; font-size: 16px; font-weight: 700; font-family: 'Open Sans', Helvetica, sans-serif; mso-line-height-rule: exactly;">
+														<div class="editable-text">
+
+															<p>{{formdata['bronze_annual']}}</p>
+															<p>{{formdata['bronze_monthly']}}</p>
+													
+														</div>
+													</td>
+												</tr>
+				
+												<tr><td height="5"></td></tr>
+												<tr>
+													<td mc:edit="text1902" align="center" class="text_color_282828" style="color: #282828;line-height: 1; font-size: 16px; font-weight: 700; font-family: 'Open Sans', Helvetica, sans-serif; mso-line-height-rule: exactly;">
+														<div class="editable-text">
+                                                            <p>Excess for Buildings &pound; 300</p>
+                                                            <p>Excess for Contents &pound; 300</p>
+														</div>
+													</td>
+												</tr>
+				
+												<!-- horizontal gap -->
+												<tr><td height="5"></td></tr>
+												<tr>
+													<td mc:edit="text1903" class="text_color_282828" align="center" style="color: #282828;font-style: italic; font-size: 14px; font-weight: &pound;; font-family: 'Open Sans', Helvetica, sans-serif; mso-line-height-rule: exactly;">
+														<div class="editable-text">
+                                                            <p><span class="text_container">&pound; 500,000 Buldings Cover </br>(rebuild cost)</span></p>
+                                                            <p><span class="text_container">&pound; 50,000 Contents Cover</span></p>
+    
+				
+				
+														</div>
+													</td>
+												</tr>
+				
+												<tr>
+													<td align="center" valign="middle" height="53" style="font-size:30px;line-height:30px;">&nbsp;</td>
+												</tr>
+											</tbody></table>
+										</div>
+				
+				
+										<div class="row" style="display:inline-block!important;max-width:10px;vertical-align:top;width:100%">
+											<table class="row" border="0" align="left" cellpadding="0" cellspacing="0">
+												<tbody><tr>
+													<td height="5" align="center" valign="top" style="font-size:20px;line-height:10px;">&nbsp;</td>
+												</tr>
+											</tbody></table>
+										</div>
+				
+				
+										<div class="row" style="display:inline-block!important;max-width:358px;vertical-align:top;width:100%">
+											<table data-bgcolor="Table-1 BG Color" width="358" class="row" border="0" align="left" cellpadding="0" cellspacing="0" style=" padding-left: 10px; padding-right: 10px;" bgcolor="#FFFFFF">
+												<tbody>
+				
+												<tr>
+													<td align="center" valign="middle" height="30" style="font-size:30px;line-height:30px;">&nbsp;</td>
+												</tr>
+												<tr>
+													<td mc:edit="text1906" align="center" class="text_color_959595" style="color: #282828; font-size: 14px; font-weight: 400; font-family: 'Open Sans', Helvetica, sans-serif; mso-line-height-rule: exactly;">
+                                                        <div class="editable-text">
+                                                            <span class="text_container"><p style="text-align: center;">5 Star Defaqto Cover</p>
+                                                            <p>Trace and Access cover &pound;5000</p>
+                                                            <p>Alternative Accommodation should you need to move out as a result of a claim</p>
+                                                            <p>UK Operation to handle your claims</p>
+                                                            <p>Also includes an Auto Rebroke - if your premium at renewal increases by more than 2.5%</p></span>
+                                                        </div>
+													</td>
+												</tr>
+												<!-- horizontal gap -->
+				
+												<!-- horizontal gap -->
+												<tr>
+													<td>
+														<!-- BUTTON -->
+														<table class="button_bg_color_CD7F32 bg_color_CD7F32" bgcolor="#CD7F32" width="105" height="30" align="center" border="0" cellpadding="0" cellspacing="0" style="border-radius:25px;border-collapse:separate;">
+															<tr>
+																<td mc:edit="text1908"  class="text_color_282828" align="center" valign="middle" style="color: #282828; font-size: 14px; font-weight: 400; font-family: 'Open Sans', Helvetica, sans-serif; mso-line-height-rule: exactly;">
+																	<div class="editable-text">
+																		<span class="text_container">
+																			<a href="{{loginurl}}" class="text_color_ffffff" style="text-decoration: none; color: #ffffff;">APPLY NOW!</a>
+																		</span>
+																	</div>
+																</td>
+															</tr>
+														</table><!-- END BUTTON -->
+													</td>
+												</tr>
+				
+										
+											</tbody></table>
+										</div>
+				
+				
+									</td>
+								</tr>
+								<tr>
+									<td height="10" align="center" valign="top" style="font-size:10px;line-height:10px;">&nbsp;</td>
+								</tr>
+							</tbody></table>
+						</td>
+					</tr>
+
+				{% else %}
+
+
+
+					<tr>
+						<td data-bgcolor="Inner Background Color" class="whiteBgcolor" align="center" valign="top" bgcolor="#FFFFFF">
+				
+							<table class="row" width="800px" border="0" align="center" cellpadding="0" cellspacing="0" style="width:800px;max-width:800px;">
+								<tbody><tr>
+									<td height="30" align="center" valign="top" style="font-size:30px;line-height:30px;">&nbsp;</td>
+								</tr>
+								<tr>
+									<td align="left" valign="top" style="font-size:0;padding:0; border:1px solid #CD7F32; border-radius: 6px;">
+				
+										<div class="row" style="display:inline-block!important;max-width:330px;vertical-align:top;width:100%">
+											<table data-bgcolor="Table-1 BG Color" width="330" class="row" border="0" align="left" cellpadding="0" cellspacing="0" style="padding-left: 10px; padding-right: 10px;" bgcolor="#CD7F32">
+												<tbody>
+				
+												<tr>
+													<td align="center" valign="middle" height="30" style="font-size:30px;line-height:30px;">&nbsp;</td>
+												</tr>
+				
+												<tr>
+													<td mc:edit="text1901" class="text_color_282828" align="center" style="color: #282828; font-size: 18px; font-weight: 700; font-family: 'Open Sans', Helvetica, sans-serif; mso-line-height-rule: exactly; text-decoration: underline;">
+														<div class="editable-text">
+															<span class="text_container">BRONZE</span>
+														</div>
+													</td>
+												</tr>
+												<!-- horizontal gap -->
+												<tr><td height="5"></td></tr>
+												<tr>
+													<td mc:edit="text1902" align="center" class="text_color_282828" style="color: #282828;line-height: 1; font-size: 16px; font-weight: 700; font-family: 'Open Sans', Helvetica, sans-serif; mso-line-height-rule: exactly;">
+														<div class="editable-text">
+
+															<p>{{formdata['bronze_annual']}}</p>
+															<p>{{formdata['bronze_monthly']}}</p>
+													
+														</div>
+													</td>
+												</tr>
+				
+												<tr><td height="5"></td></tr>
+												<tr>
+													<td mc:edit="text1902" align="center" class="text_color_282828" style="color: #282828;line-height: 1; font-size: 16px; font-weight: 700; font-family: 'Open Sans', Helvetica, sans-serif; mso-line-height-rule: exactly;">
+														<div class="editable-text">
+                                                            <p>Excess for Buildings &pound; 300</p>
+														</div>
+													</td>
+												</tr>
+				
+												<!-- horizontal gap -->
+												<tr><td height="5"></td></tr>
+												<tr>
+													<td mc:edit="text1903" class="text_color_282828" align="center" style="color: #282828;font-style: italic; font-size: 14px; font-weight: &pound;; font-family: 'Open Sans', Helvetica, sans-serif; mso-line-height-rule: exactly;">
+														<div class="editable-text">
+                                                            <p><span class="text_container">&pound; 1,000,000 Buldings Cover </br>(rebuild cost)</span></p>
+    
+				
+				
+														</div>
+													</td>
+												</tr>
+				
+												<tr>
+													<td align="center" valign="middle" height="53" style="font-size:30px;line-height:30px;">&nbsp;</td>
+												</tr>
+											</tbody></table>
+										</div>
+				
+				
+										<div class="row" style="display:inline-block!important;max-width:10px;vertical-align:top;width:100%">
+											<table class="row" border="0" align="left" cellpadding="0" cellspacing="0">
+												<tbody><tr>
+													<td height="5" align="center" valign="top" style="font-size:20px;line-height:10px;">&nbsp;</td>
+												</tr>
+											</tbody></table>
+										</div>
+				
+				
+										<div class="row" style="display:inline-block!important;max-width:358px;vertical-align:top;width:100%">
+											<table data-bgcolor="Table-1 BG Color" width="358" class="row" border="0" align="left" cellpadding="0" cellspacing="0" style=" padding-left: 10px; padding-right: 10px;" bgcolor="#FFFFFF">
+												<tbody>
+				
+												<tr>
+													<td align="center" valign="middle" height="30" style="font-size:30px;line-height:30px;">&nbsp;</td>
+												</tr>
+												<tr>
+													<td mc:edit="text1906" align="center" class="text_color_959595" style="color: #282828; font-size: 14px; font-weight: 400; font-family: 'Open Sans', Helvetica, sans-serif; mso-line-height-rule: exactly;">
+                                                        <div class="editable-text">
+                                                            <span class="text_container"><p style="text-align: center;">5 Star Defaqto Cover</p>
+                                                            <p>Malicious Damage by tenants covered as standard</p>
+                                                            <p>Up to &pound;200,000 for alternative accommodation and loss of rent receivable if the property is uninhabitable due to an insured event</p>
+                                                            <p>UK Operation to handle your claims</p>
+                                                        </div>
+													</td>
+												</tr>
+												<!-- horizontal gap -->
+				
+												<!-- horizontal gap -->
+												<tr>
+													<td>
+														<!-- BUTTON -->
+														<table class="button_bg_color_CD7F32 bg_color_CD7F32" bgcolor="#CD7F32" width="105" height="30" align="center" border="0" cellpadding="0" cellspacing="0" style="border-radius:25px;border-collapse:separate;">
+															<tr>
+																<td mc:edit="text1908"  class="text_color_282828" align="center" valign="middle" style="color: #282828; font-size: 14px; font-weight: 400; font-family: 'Open Sans', Helvetica, sans-serif; mso-line-height-rule: exactly;">
+																	<div class="editable-text">
+																		<span class="text_container">
+																			<a href="{{loginurl}}" class="text_color_ffffff" style="text-decoration: none; color: #ffffff;">APPLY NOW!</a>
+																		</span>
+																	</div>
+																</td>
+															</tr>
+														</table><!-- END BUTTON -->
+													</td>
+												</tr>
+				
+										
+											</tbody></table>
+										</div>
+				
+				
+									</td>
+								</tr>
+								<tr>
+									<td height="10" align="center" valign="top" style="font-size:10px;line-height:10px;">&nbsp;</td>
+								</tr>
+							</tbody></table>
+						</td>
+					</tr>
+
+				
+                    {% endif %}
+                    {% if formdata['insurance_type'] == "home_insurance" %}
+
+					<tr>
+						<td data-bgcolor="Inner Background Color" class="whiteBgcolor" align="center" valign="top" bgcolor="#FFFFFF">
+				
+							<table class="row" width="800px" border="0" align="center" cellpadding="0" cellspacing="0" style="width:800px;max-width:800px;">
+								<tbody><tr>
+									<td height="30" align="center" valign="top" style="font-size:30px;line-height:30px;">&nbsp;</td>
+								</tr>
+								<tr>
+									<td align="left" valign="top" style="font-size:0;padding:0; border:1px solid #C0C0C0; border-radius: 6px;">
+				
+				
+										<div class="row" style="display:inline-block!important;max-width:330px;vertical-align:top;width:100%">
+											<table data-bgcolor="Table-1 BG Color" width="330" class="row" border="0" align="left" cellpadding="0" cellspacing="0" style="padding-left: 10px; padding-right: 10px;" bgcolor="#C0C0C0">
+												<tbody>
+				
+												<tr>
+													<td align="center" valign="middle" height="30" style="font-size:30px;line-height:30px;">&nbsp;</td>
+												</tr>
+				
+												<tr>
+													<td mc:edit="text1901" class="text_color_282828" align="center" style="color: #282828; font-size: 18px; font-weight: 700; font-family: 'Open Sans', Helvetica, sans-serif; mso-line-height-rule: exactly; text-decoration: underline;">
+														<div class="editable-text">
+															<span class="text_container">SILVER</span>
+														</div>
+													</td>
+												</tr>
+												<!-- horizontal gap -->
+												<tr><td height="5"></td></tr>
+												<tr>
+													<td mc:edit="text1902" align="center" class="text_color_282828" style="color: #282828;line-height: 1; font-size: 16px; font-weight: 700; font-family: 'Open Sans', Helvetica, sans-serif; mso-line-height-rule: exactly;">
+														<div class="editable-text">
+
+															<p>{{formdata['silver_annual']}}</p>
+															<p>{{formdata['silver_monthly']}}</p>
+													
+														</div>
+													</td>
+												</tr>
+				
+												<tr><td height="5"></td></tr>
+												<tr>
+													<td mc:edit="text1902" align="center" class="text_color_282828" style="color: #282828;line-height: 1; font-size: 16px; font-weight: 700; font-family: 'Open Sans', Helvetica, sans-serif; mso-line-height-rule: exactly;">
+														<div class="editable-text">
+															<p>Excess for Buildings &pound; 100</p>
+															<p>Excess for Contents &pound; 100</p>
+														</div>
+													</td>
+												</tr>
+				
+												<!-- horizontal gap -->
+												<tr><td height="5"></td></tr>
+												<tr>
+													<td mc:edit="text1903" class="text_color_282828" align="center" style="color: #282828;font-style: italic; font-size: 14px; font-weight: &pound;; font-family: 'Open Sans', Helvetica, sans-serif; mso-line-height-rule: exactly;">
+														<div class="editable-text">
+															<p><span class="text_container">&pound; 500,000 Buldings Cover </br>(rebuild cost)</span></p>
+															<p><span class="text_container">&pound; 50,000 Contents Cover</span></p>
+				
+				
+														</div>
+													</td>
+												</tr>
+				
+												<tr>
+													<td align="center" valign="middle" height="53" style="font-size:30px;line-height:30px;">&nbsp;</td>
+												</tr>
+											</tbody></table>
+										</div>
+				
+				
+										<div class="row" style="display:inline-block!important;max-width:10px;vertical-align:top;width:100%">
+											<table class="row" border="0" align="left" cellpadding="0" cellspacing="0">
+												<tbody><tr>
+													<td height="5" align="center" valign="top" style="font-size:20px;line-height:10px;">&nbsp;</td>
+												</tr>
+											</tbody></table>
+										</div>
+				
+				
+										<div class="row" style="display:inline-block!important;max-width:358px;vertical-align:top;width:100%">
+											<table data-bgcolor="Table-1 BG Color" width="358" class="row" border="0" align="left" cellpadding="0" cellspacing="0" style=" padding-left: 10px; padding-right: 10px;" bgcolor="#FFFFFF">
+												<tbody>
+				
+												<tr>
+													<td align="center" valign="middle" height="30" style="font-size:30px;line-height:30px;">&nbsp;</td>
+												</tr>
+												<tr>
+													<td mc:edit="text1906" align="center" class="text_color_959595" style="color: #282828; font-size: 14px; font-weight: 400; font-family: 'Open Sans', Helvetica, sans-serif; mso-line-height-rule: exactly;">
+														<div class="editable-text">
+                                                            <span class="text_container"><p><strong>All the above</strong> but also</p>
+                                                                <p>+ Lower Excesses</p>
+                                                                <p>On buildings and content</p>
+                                                                <p>+ Accidental Damage on contents cover this includes office equipment used for business if you work from home </br></p>
+                                                            </span>
+
+                                                            </div>
+													</td>
+												</tr>
+												<!-- horizontal gap -->
+				
+												<!-- horizontal gap -->
+												<tr>
+													<td>
+														<!-- BUTTON -->
+														<table class="button_bg_color_C0C0C0 bg_color_C0C0C0" bgcolor="#C0C0C0" width="105" height="30" align="center" border="0" cellpadding="0" cellspacing="0" style="border-radius:25px;border-collapse:separate;">
+															<tr>
+																<td mc:edit="text1908"  class="text_color_282828" align="center" valign="middle" style="color: #282828; font-size: 14px; font-weight: 400; font-family: 'Open Sans', Helvetica, sans-serif; mso-line-height-rule: exactly;">
+																	<div class="editable-text">
+																		<span class="text_container">
+																			<a href="{{loginurl}}" class="text_color_ffffff" style="text-decoration: none; color: #ffffff;">APPLY NOW!</a>
+																		</span>
+																	</div>
+																</td>
+															</tr>
+														</table><!-- END BUTTON -->
+													</td>
+												</tr>
+				
+										
+											</tbody></table>
+										</div>
+				
+				
+									</td>
+								</tr>
+								<tr>
+									<td height="20" align="center" valign="top" style="font-size:10px;line-height:10px;">&nbsp;</td>
+								</tr>
+							</tbody></table>
+						</td>
+					</tr>
+				
+				{% else %}
+
+
+					<tr>
+						<td data-bgcolor="Inner Background Color" class="whiteBgcolor" align="center" valign="top" bgcolor="#FFFFFF">
+				
+							<table class="row" width="800px" border="0" align="center" cellpadding="0" cellspacing="0" style="width:800px;max-width:800px;">
+								<tbody><tr>
+									<td height="30" align="center" valign="top" style="font-size:30px;line-height:30px;">&nbsp;</td>
+								</tr>
+								<tr>
+									<td align="left" valign="top" style="font-size:0;padding:0; border:1px solid #C0C0C0; border-radius: 6px;">
+				
+				
+										<div class="row" style="display:inline-block!important;max-width:330px;vertical-align:top;width:100%">
+											<table data-bgcolor="Table-1 BG Color" width="330" class="row" border="0" align="left" cellpadding="0" cellspacing="0" style="padding-left: 10px; padding-right: 10px;" bgcolor="#C0C0C0">
+												<tbody>
+				
+												<tr>
+													<td align="center" valign="middle" height="30" style="font-size:30px;line-height:30px;">&nbsp;</td>
+												</tr>
+				
+												<tr>
+													<td mc:edit="text1901" class="text_color_282828" align="center" style="color: #282828; font-size: 18px; font-weight: 700; font-family: 'Open Sans', Helvetica, sans-serif; mso-line-height-rule: exactly; text-decoration: underline;">
+														<div class="editable-text">
+															<span class="text_container">SILVER</span>
+														</div>
+													</td>
+												</tr>
+												<!-- horizontal gap -->
+												<tr><td height="5"></td></tr>
+												<tr>
+													<td mc:edit="text1902" align="center" class="text_color_282828" style="color: #282828;line-height: 1; font-size: 16px; font-weight: 700; font-family: 'Open Sans', Helvetica, sans-serif; mso-line-height-rule: exactly;">
+														<div class="editable-text">
+
+															<p>{{formdata['silver_annual']}}</p>
+															<p>{{formdata['silver_monthly']}}</p>
+													
+														</div>
+													</td>
+												</tr>
+				
+												<tr><td height="5"></td></tr>
+												<tr>
+													<td mc:edit="text1902" align="center" class="text_color_282828" style="color: #282828;line-height: 1; font-size: 16px; font-weight: 700; font-family: 'Open Sans', Helvetica, sans-serif; mso-line-height-rule: exactly;">
+														<div class="editable-text">
+															<p>Excess for Buildings &pound; 100</p>
+														</div>
+													</td>
+												</tr>
+				
+												<!-- horizontal gap -->
+												<tr><td height="5"></td></tr>
+												<tr>
+													<td mc:edit="text1903" class="text_color_282828" align="center" style="color: #282828;font-style: italic; font-size: 14px; font-weight: &pound;; font-family: 'Open Sans', Helvetica, sans-serif; mso-line-height-rule: exactly;">
+														<div class="editable-text">
+															<p><span class="text_container">&pound; 1,000,000 Buldings Cover </br>(rebuild cost)</span></p>
+				
+				
+														</div>
+													</td>
+												</tr>
+				
+												<tr>
+													<td align="center" valign="middle" height="53" style="font-size:30px;line-height:30px;">&nbsp;</td>
+												</tr>
+											</tbody></table>
+										</div>
+				
+				
+										<div class="row" style="display:inline-block!important;max-width:10px;vertical-align:top;width:100%">
+											<table class="row" border="0" align="left" cellpadding="0" cellspacing="0">
+												<tbody><tr>
+													<td height="5" align="center" valign="top" style="font-size:20px;line-height:10px;">&nbsp;</td>
+												</tr>
+											</tbody></table>
+										</div>
+				
+				
+										<div class="row" style="display:inline-block!important;max-width:358px;vertical-align:top;width:100%">
+											<table data-bgcolor="Table-1 BG Color" width="358" class="row" border="0" align="left" cellpadding="0" cellspacing="0" style=" padding-left: 10px; padding-right: 10px;" bgcolor="#FFFFFF">
+												<tbody>
+				
+												<tr>
+													<td align="center" valign="middle" height="30" style="font-size:30px;line-height:30px;">&nbsp;</td>
+												</tr>
+												<tr>
+													<td mc:edit="text1906" align="center" class="text_color_959595" style="color: #282828; font-size: 14px; font-weight: 400; font-family: 'Open Sans', Helvetica, sans-serif; mso-line-height-rule: exactly;">
+														<div class="editable-text">
+                                                            <span class="text_container"><p><strong>All the above</strong> but also</p>
+                                                                <p>+ Lower Excesses on buildings</p>
+                                                                <p>Accidental Damag</p>
+                                                                <p>Landlords home emergency cover: provides a 24-hour service with access to approved tradesmen to resolve a range of emergencies</p>
+                                                            </span>
+
+                                                            </div>
+													</td>
+												</tr>
+												<!-- horizontal gap -->
+				
+												<!-- horizontal gap -->
+												<tr>
+													<td>
+														<!-- BUTTON -->
+														<table class="button_bg_color_C0C0C0 bg_color_C0C0C0" bgcolor="#C0C0C0" width="105" height="30" align="center" border="0" cellpadding="0" cellspacing="0" style="border-radius:25px;border-collapse:separate;">
+															<tr>
+																<td mc:edit="text1908"  class="text_color_282828" align="center" valign="middle" style="color: #282828; font-size: 14px; font-weight: 400; font-family: 'Open Sans', Helvetica, sans-serif; mso-line-height-rule: exactly;">
+																	<div class="editable-text">
+																		<span class="text_container">
+																			<a href="{{loginurl}}" class="text_color_ffffff" style="text-decoration: none; color: #ffffff;">APPLY NOW!</a>
+																		</span>
+																	</div>
+																</td>
+															</tr>
+														</table><!-- END BUTTON -->
+													</td>
+												</tr>
+				
+										
+											</tbody></table>
+										</div>
+				
+				
+									</td>
+								</tr>
+								<tr>
+									<td height="20" align="center" valign="top" style="font-size:10px;line-height:10px;">&nbsp;</td>
+								</tr>
+							</tbody></table>
+						</td>
+					</tr>
+				
+				
+                {% endif %}
+                {% if formdata['insurance_type'] == "home_insurance" %}
+
+				
+                    <tr>
+						<td data-bgcolor="Inner Background Color" class="whiteBgcolor" align="center" valign="top" bgcolor="#FFFFFF">
+				
+							<table class="row" width="800px" border="0" align="center" cellpadding="0" cellspacing="0" style="width:800px;max-width:800px;">
+								<tbody><tr>
+									<td height="30" align="center" valign="top" style="font-size:30px;line-height:30px;">&nbsp;</td>
+								</tr>
+								<tr>
+									<td align="left" valign="top" style="font-size:0;padding:0; border:1px solid #FFD700; border-radius: 6px;">
+				
+				
+										<div class="row" style="display:inline-block!important;max-width:330px;vertical-align:top;width:100%">
+											<table data-bgcolor="Table-1 BG Color" width="330" class="row" border="0" align="left" cellpadding="0" cellspacing="0" style="padding-left: 10px; padding-right: 10px;" bgcolor="#FFD700">
+												<tbody>
+				
+												<tr>
+													<td align="center" valign="middle" height="30" style="font-size:30px;line-height:30px;">&nbsp;</td>
+												</tr>
+				
+												<tr>
+													<td mc:edit="text1901" class="text_color_282828" align="center" style="color: #282828; font-size: 18px; font-weight: 700; font-family: 'Open Sans', Helvetica, sans-serif; mso-line-height-rule: exactly; text-decoration: underline;">
+														<div class="editable-text">
+															<span class="text_container">GOLD</span>
+														</div>
+													</td>
+												</tr>
+												<!-- horizontal gap -->
+												<tr><td height="5"></td></tr>
+												<tr>
+													<td mc:edit="text1902" align="center" class="text_color_282828" style="color: #282828;line-height: 1; font-size: 16px; font-weight: 700; font-family: 'Open Sans', Helvetica, sans-serif; mso-line-height-rule: exactly;">
+														<div class="editable-text">
+
+															<p>{{formdata['gold_annual']}}</p>
+															<p>{{formdata['gold_monthly']}}</p>
+													
+														</div>
+													</td>
+												</tr>
+												<tr><td height="5"></td></tr>
+												<tr>
+													<td mc:edit="text1902" align="center" class="text_color_282828" style="color: #282828;line-height: 1; font-size: 16px; font-weight: 700; font-family: 'Open Sans', Helvetica, sans-serif; mso-line-height-rule: exactly;">
+														<div class="editable-text">
+															<p>Excess for Buildings &pound; 100</p>
+															<p>Excess for Contents &pound; 100</p>
+														</div>
+													</td>
+												</tr>
+												<!-- horizontal gap -->
+												<tr><td height="5"></td></tr>
+												<tr>
+													<td mc:edit="text1903" class="text_color_282828" align="center" style="color: #282828;font-style: italic; font-size: 14px; font-weight: &pound;; font-family: 'Open Sans', Helvetica, sans-serif; mso-line-height-rule: exactly;">
+														<div class="editable-text">
+															<p><span class="text_container">&pound; 500,000 Buldings Cover </br>(rebuild cost)</span></p>
+															<p><span class="text_container">&pound; 50,000 Contents Cover</span></p>
+				
+				
+														</div>
+													</td>
+												</tr>
+				
+												<tr>
+													<td align="center" valign="middle" height="53" style="font-size:30px;line-height:30px;">&nbsp;</td>
+												</tr>
+											</tbody></table>
+										</div>
+				
+				
+										<div class="row" style="display:inline-block!important;max-width:10px;vertical-align:top;width:100%">
+											<table class="row" border="0" align="left" cellpadding="0" cellspacing="0">
+												<tbody><tr>
+													<td height="5" align="center" valign="top" style="font-size:20px;line-height:10px;">&nbsp;</td>
+												</tr>
+											</tbody></table>
+										</div>
+				
+				
+										<div class="row" style="display:inline-block!important;max-width:358px;vertical-align:top;width:100%">
+											<table data-bgcolor="Table-1 BG Color" width="358" class="row" border="0" align="left" cellpadding="0" cellspacing="0" style=" padding-left: 10px; padding-right: 10px;" bgcolor="#FFFFFF">
+												<tbody>
+				
+												<tr>
+													<td align="center" valign="middle" height="30" style="font-size:30px;line-height:30px;">&nbsp;</td>
+												</tr>
+												<tr>
+													<td mc:edit="text1906" align="center" class="text_color_959595" style="color: #282828; font-size: 14px; font-weight: 400; font-family: 'Open Sans', Helvetica, sans-serif; mso-line-height-rule: exactly;">
+														<div class="editable-text">
+															<span class="text_container">
+				<p><strong>All the above </strong>and includes</p>
+					<p>&pound;1500 cover for Personal possessions away from the home both home and abroad<br /><br /> Phones to &pound;250(lost at home or anywhere in Europe)</p>
+					<ul>
+					<li style="text-align: left;">Push Bikes to &pound;500</li>
+					<li style="text-align: left;">Loss of Money to &pound;500</li>
+					<li style="text-align: left;">Credit Cards to &pound;500</li>
+					</ul>
+                </span>
+				
+															<p>&nbsp;</p>
+														</div>
+													</td>
+												</tr>
+												<!-- horizontal gap -->
+				
+												<!-- horizontal gap -->
+												<tr>
+													<td>
+														<!-- BUTTON -->
+														<table class="button_bg_color_ffd700 bg_color_ffd700" bgcolor="#ffd700" width="105" height="30" align="center" border="0" cellpadding="0" cellspacing="0" style="border-radius:25px;border-collapse:separate;">
+															<tr>
+																<td mc:edit="text1908"  class="text_color_282828" align="center" valign="middle" style="color: #282828; font-size: 14px; font-weight: 400; font-family: 'Open Sans', Helvetica, sans-serif; mso-line-height-rule: exactly;">
+																	<div class="editable-text">
+																		<span class="text_container">
+																			<a href="{{loginurl}}" class="text_color_ffffff" style="text-decoration: none; color: #ffffff;">APPLY NOW!</a>
+																		</span>
+																	</div>
+																</td>
+															</tr>
+														</table><!-- END BUTTON -->
+													</td>
+												</tr>
+				
+										
+											</tbody></table>
+										</div>
+				
+				
+									</td>
+								</tr>
+								<tr>
+									<td height="5" align="center" valign="top" style="font-size:10px;line-height:5px;">&nbsp;</td>
+								</tr>
+							</tbody></table>
+						</td>
+					</tr>
+{% else %}
+
+
+
+<tr>
+    <td data-bgcolor="Inner Background Color" class="whiteBgcolor" align="center" valign="top" bgcolor="#FFFFFF">
+
+        <table class="row" width="800px" border="0" align="center" cellpadding="0" cellspacing="0" style="width:800px;max-width:800px;">
+            <tbody><tr>
+                <td height="30" align="center" valign="top" style="font-size:30px;line-height:30px;">&nbsp;</td>
+            </tr>
+            <tr>
+                <td align="left" valign="top" style="font-size:0;padding:0; border:1px solid #FFD700; border-radius: 6px;">
+
+
+                    <div class="row" style="display:inline-block!important;max-width:330px;vertical-align:top;width:100%">
+                        <table data-bgcolor="Table-1 BG Color" width="330" class="row" border="0" align="left" cellpadding="0" cellspacing="0" style="padding-left: 10px; padding-right: 10px;" bgcolor="#FFD700">
+                            <tbody>
+
+                            <tr>
+                                <td align="center" valign="middle" height="30" style="font-size:30px;line-height:30px;">&nbsp;</td>
+                            </tr>
+
+                            <tr>
+                                <td mc:edit="text1901" class="text_color_282828" align="center" style="color: #282828; font-size: 18px; font-weight: 700; font-family: 'Open Sans', Helvetica, sans-serif; mso-line-height-rule: exactly; text-decoration: underline;">
+                                    <div class="editable-text">
+                                        <span class="text_container">GOLD</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- horizontal gap -->
+                            <tr><td height="5"></td></tr>
+                            <tr>
+                                <td mc:edit="text1902" align="center" class="text_color_282828" style="color: #282828;line-height: 1; font-size: 16px; font-weight: 700; font-family: 'Open Sans', Helvetica, sans-serif; mso-line-height-rule: exactly;">
+                                    <div class="editable-text">
+
+                                        <p>{{formdata['gold_annual']}}</p>
+                                        <p>{{formdata['gold_monthly']}}</p>
+                                
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr><td height="5"></td></tr>
+                            <tr>
+                                <td mc:edit="text1902" align="center" class="text_color_282828" style="color: #282828;line-height: 1; font-size: 16px; font-weight: 700; font-family: 'Open Sans', Helvetica, sans-serif; mso-line-height-rule: exactly;">
+                                    <div class="editable-text">
+                                        <p>Excess for Buildings &pound; 100</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- horizontal gap -->
+                            <tr><td height="5"></td></tr>
+                            <tr>
+                                <td mc:edit="text1903" class="text_color_282828" align="center" style="color: #282828;font-style: italic; font-size: 14px; font-weight: &pound;; font-family: 'Open Sans', Helvetica, sans-serif; mso-line-height-rule: exactly;">
+                                    <div class="editable-text">
+                                        <p><span class="text_container">&pound; 1,000,000 Buldings Cover </br>(rebuild cost)</span></p>
+
+
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td align="center" valign="middle" height="53" style="font-size:30px;line-height:30px;">&nbsp;</td>
+                            </tr>
+                        </tbody></table>
+                    </div>
+
+
+                    <div class="row" style="display:inline-block!important;max-width:10px;vertical-align:top;width:100%">
+                        <table class="row" border="0" align="left" cellpadding="0" cellspacing="0">
+                            <tbody><tr>
+                                <td height="5" align="center" valign="top" style="font-size:20px;line-height:10px;">&nbsp;</td>
+                            </tr>
+                        </tbody></table>
+                    </div>
+
+
+                    <div class="row" style="display:inline-block!important;max-width:358px;vertical-align:top;width:100%">
+                        <table data-bgcolor="Table-1 BG Color" width="358" class="row" border="0" align="left" cellpadding="0" cellspacing="0" style=" padding-left: 10px; padding-right: 10px;" bgcolor="#FFFFFF">
+                            <tbody>
+
+                            <tr>
+                                <td align="center" valign="middle" height="30" style="font-size:30px;line-height:30px;">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td mc:edit="text1906" align="center" class="text_color_959595" style="color: #282828; font-size: 14px; font-weight: 400; font-family: 'Open Sans', Helvetica, sans-serif; mso-line-height-rule: exactly;">
+                                    <div class="editable-text">
+                                        <span class="text_container">
+<p><strong>All the above </strong>and includes</p>
+<p>Rent protect</p>
+<p>Legal expenses cover </p>
+
+<ul>
+<li style="text-align: left;">Cover up to &pound;2500 rent voids per month (maximum 6 months) </li>
+<li style="text-align: left;">&pound;100,000 legal expenses for general advise all the way through to eviction</li>
+</ul>
+
+<p><i>Note: Any dispute arising within the first 60 days of the period of insurance will be excluded if the tenancy agreement commenced prior to the inception of this policy.</i>
+</p>
+
+</span>
+
+                                        <p>&nbsp;</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- horizontal gap -->
+
+                            <!-- horizontal gap -->
+                            <tr>
+                                <td>
+                                    <!-- BUTTON -->
+                                    <table class="button_bg_color_ffd700 bg_color_ffd700" bgcolor="#ffd700" width="105" height="30" align="center" border="0" cellpadding="0" cellspacing="0" style="border-radius:25px;border-collapse:separate;">
+                                        <tr>
+                                            <td mc:edit="text1908"  class="text_color_282828" align="center" valign="middle" style="color: #282828; font-size: 14px; font-weight: 400; font-family: 'Open Sans', Helvetica, sans-serif; mso-line-height-rule: exactly;">
+                                                <div class="editable-text">
+                                                    <span class="text_container">
+                                                        <a href="{{loginurl}}" class="text_color_ffffff" style="text-decoration: none; color: #ffffff;">APPLY NOW!</a>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table><!-- END BUTTON -->
+                                </td>
+                            </tr>
+
+                    
+                        </tbody></table>
+                    </div>
+
+
+                </td>
+            </tr>
+            <tr>
+                <td height="5" align="center" valign="top" style="font-size:10px;line-height:5px;">&nbsp;</td>
+            </tr>
+        </tbody></table>
+    </td>
+</tr>
+
+{% endif %}
+
+			</tbody></table>
+		</td>
+	</tr>
+</tbody></table>
+<table class="row" border="0" align="left" cellpadding="0" cellspacing="0">
+    <tbody><tr>
+        <td height="20" align="center" valign="top" style="font-size:20px;line-height:20px;">&nbsp;</td>
+    </tr>
+</tbody></table>
+
+
+	
+<table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="full">
+    <tbody><tr>
+        <td width="100%" valign="top" align="center">
+
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="mobile">
+                <tbody><tr>
+                    <td align="center">
+                        <table class="row" border="0" align="left" cellpadding="0" cellspacing="0">
+                            <tbody><tr>
+                                <td height="20" align="center" valign="top" style="font-size:20px;line-height:20px;">&nbsp;</td>
+                            </tr>
+                        </tbody></table>
+
+                        <table width="100%" border="0" class="center" cellpadding="0" cellspacing="0" align="center" class="full">
+                            <tbody><tr>
+                                <td width="100%" align="center">
+
+
+
+<table width="800" border="0" cellpadding="0" cellspacing="0" align="center" class="row" style="width:600px;max-width:900px;">
+	<tr>
+		<td align="center" valign="top" class="container-padding">
+            <table class="table table-hover client-table order-table2   table-stripedmb-0" id="client-table"  style="width:900px;max-width:900px;margin-left:5px;">
+
+                <thead class="thead-dark">
+                    <tr>
+
+                      <th colspan="2"> What is </th>
+
+  
+                    </tr>
+                </thead>
+
+                <tbody>
+                    {% if formdata['insurance_type'] == "home_insurance" %}
+                    <tr>
+                        
+                        <td style="width:50%;"><a href="{{formdata['accidental_damage_video']}}"><br><strong style="color:#1d2331;font-weight:bolder;text-decoration: none;" >Accidental Damage</strong></a>
+                        </td>
+                        <td ><a href="{{formdata['legal_protection_video']}}"><br><strong style="color:#1d2331;font-weight:bolder;text-decoration: none;" >Legal Protection</strong></a>
+                        </td>
+        
+                    </tr>
+
+                    <tr>
+                        <td style="width:50%;"><a href="{{formdata['personal_possession_video']}}"><br><strong style="color:#1d2331;font-weight:bolder;text-decoration: none;" >Personal Possessions Cover</strong></a>
+                        </td>
+                        <td style="width:50%;"><a href="{{formdata['home_emergency_video']}}"><br><strong style="color:#1d2331;font-weight:bolder;text-decoration: none;" >Home Emergency</strong></a>
+                        </td>
+        
+                    </tr>
+                    {% else %}
+
+                    <tr>
+                        
+                        <td style="width:50%;"><a href="{{formdata['accidental_damage_video']}}"><br><strong style="color:#1d2331;font-weight:bolder;text-decoration: none;" >Accidental Damage</strong></a>
+                        </td>
+                        <td ><a href="{{formdata['legal_protection_video']}}"><br><strong style="color:#1d2331;font-weight:bolder;text-decoration: none;" >Legal Protection</strong></a>
+                        </td>
+        
+                    </tr>
+
+                    <tr>
+                        <td style="width:50%;" colspan="2"><a href="{{formdata['rent_protect_video']}}"><br><strong style="color:#1d2331;font-weight:bolder;text-decoration: none;" >Personal Possessions Cover</strong></a>
+                        </td>
+                 
+        
+                    </tr>
+
+                    {% endif %}
+
+
+
+                </tbody>
+            </table>
+
+
+		</td>
+	</tr>
+</table>
+
+
+	
+</td>
+</tr>
+</tbody></table>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+
+<table class="row" border="0" align="left" cellpadding="0" cellspacing="0">
+    <tbody><tr>
+        <td height="20" align="center" valign="top" style="font-size:20px;line-height:20px;">&nbsp;</td>
+    </tr>
+</tbody></table>
+
+
+	{% if current_provider_details_buildings != [] %}
+	
+
+
+
+	
+										<table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" bgcolor="#ffffff" style="border-width: 1px; border-style: solid; border-color: #e6e6e6; background-color: #ffffff;width:900px;max-width:900px;margin-left:5px;" class="fullCenter">
+											<tbody><tr>
+												<td width="100%" height="25" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+											</tr>
+											<tr>
+												<td width="100%" align="center" class="pad20" style="width:900px;max-width:900px;">
+	
+													<table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="full" style="width:900px;max-width:900px;">
+														<tbody><tr>
+															<td width="100%" style="color: #3d3d3d; font-family: Helvetica, Arial, sans-serif, 'Questrial'; font-weight: 500; vertical-align: top; font-size: 20px; text-align: center; line-height: 24px;width:900px;max-width:900px;" class="questrial fullCenter">
+																Your Paymentshield Defaqto Comparison - Buildings Insurance
+															</td>
+														</tr>
+													</tbody></table>
+	
+												</td>
+											</tr>
+	
+	
+											<tr>
+												<td width="100%" height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+											</tr>
+	
+	
+						<!-- CSS Code: Place this code in the document's head (between the 'head' tags) -->
+	
+	  <!-- HTML Code: Place this code in the document's body (between the 'body' tags) where the table should appear -->
+	  <table class="table table-hover client-table order-table2   table-stripedmb-0" id="client-table" style="width:900px;max-width:900px;margin-left:5px;">
+		<thead class="thead-color">
+		  <tr>
+            {% if formdata['current_provider'] != None %}
+
+            {% if "Paymentshield" not in formdata['current_provider'] %}
+			<th style="width:680px;"> Product Features</th>
+			<th style="width:680px;"> Defaqto Benchmark</th>
+			<th style="width:680px;">Paymentshield </th>
+  
+			<th style="width:680px;">{{formdata['current_provider']}}</th>
+            {% else %}
+			<th style="width:700px;"> Product Features</th>
+			<th style="width:700px;"> Defaqto Benchmark</th>
+			<th style="width:700px;">Paymentshield </th>
+            {% endif %}
+
+            {% else %}
+			<th style="width:700px;"> Product Features</th>
+			<th style="width:700px;"> Defaqto Benchmark</th>
+			<th style="width:700px;">Paymentshield </th>
+        {% endif %}       
+		  </tr>
+		</thead>
+		<tbody>
+            {% if formdata['current_provider_details_buildings'] != [] %}
+
+
+		  {% for buildings in formdata['current_provider_details_buildings'] %}
+		  {% for paymnt_buildings in formdata['paymentshield_provider_details_buildings'] %}
+		  {% if buildings == paymnt_buildings %}
+		  <tr>
+			<td>{{buildings}}</td>
+			<td>
+			  {% if buildings  == "Sum Insured Protection" %}
+			  £500,000 Or More	
+			  {% elif buildings  == "Alternative Accommodation" %}
+			  £75,000 Or More	
+			  {% elif buildings  == "Repairs Guarantee Period" %}
+			  12 Months Or More	
+			  {% elif buildings  == "Home Emergency Cover" %}
+			  Optional
+			  {% elif buildings  == "Home Emergency - Maximum Limit" %}
+			  £1,000 Or More	
+			  {% elif buildings  == "Buildings AD" %}
+			  Optional
+			  {% elif buildings  == "Trace and Access" %}
+			  £5,000 Or More	
+			  {% elif buildings  == "Burst Pipes" %}
+			  Yes
+			  {% elif buildings  == "Subsidence" %}
+			  Standard
+			  {% elif buildings  == "Blockage of Sewer Pipe" %}
+			  Standard
+			  {% elif buildings  == "Blockage of Sewer Pipe Sum Insured" %}
+			  Up To Buildings Sum Insured	
+			  {% elif buildings  == "Emergency Repairs Helpline" %}
+			  Yes
+			  {% elif buildings  == "Buildings Minimum Excess" %}
+			  Less Than £100
+			  {% elif buildings  == "Underground Services" %}
+			  Standard
+			  {% elif buildings  == "Glass Breakage" %}
+			  Standard
+			  {% elif buildings  == "Multiple Excess Applies" %}
+			  No
+			  {% elif buildings  == "Public Liability" %}
+			  £2m Or More
+			  {% elif buildings  == "Adjustment Fee" %}
+			  £0	
+			  {% elif buildings  == "Cancellation Fee" %}
+			  £0
+              {% elif buildings  == "Loss of Rent" %}
+			  Standard
+			  {% elif buildings  == "Legal Helpline" %}
+			  Yes
+			  {% elif buildings  == "Trace and Acces" %}
+			  £5,000 Or More	
+			  {% elif buildings  == "Home Emergency Cove" %}
+			  Optional	
+			  {% elif buildings  == "Underground Services" %}
+			  Standard	
+			  {% elif buildings  == "Legal Expenses - Cover" %}
+			  Optional	
+			  {% elif buildings  == "Tree Felling or Loppin" %}
+			  Yes
+			  {% elif buildings  == "Loss of Rent Sum Insured" %}
+			  £40,000 Or More	
+			  {% elif buildings  == "Repairs Guarantee Period" %}
+			  12 Months Or More	
+			  {% elif buildings  == "Alternative Accommodation" %}
+			  Standard
+			  {% elif buildings  == "Property Owners Liability" %}
+			  £2m Or More	
+			  {% elif buildings  == "Contents - Accidental Damage" %}
+			  Optional	
+			  {% elif buildings  == "Buildings - Accidental Damage" %}
+			  Optional	
+			  {% elif buildings  == "Home Emergency - Maximum Limit" %}
+			  £500 Or More	
+			  {% elif buildings  == "Assumed Sum Insured (Buildings)" %}
+
+			  {% elif buildings  == "Malicious Damage by Tenants (B)" %}
+			  Standard	
+			  {% elif buildings  == "Theft Damage by Tenants Buildings" %}
+			  Standard	
+			  {% elif buildings  == "Blockage of Sewer Pipe Sum Insured" %}
+			  Up To Buildings Sum Insured	
+			  {% elif buildings  == "Sum Insured Protection (Buildings)" %}
+			  £500,000 Or More	
+			  {% elif buildings  == "Legal Expenses - Maximum Indemnity Limit" %}
+			  £100,000 Or More	
+			  {% elif buildings  == "Alternative Accommodation Sum Insured (B)" %}
+			  £40,000 Or More	
+			  {% elif buildings  == "Malicious Damage by Tenants Sum Insured (B)" %}
+			  Up To Buildings Sum Insured	
+			  {% elif buildings  == "Theft Damage by Tenants Sum Insured - Buildings " %}
+			  Up To Buildings Sum Insured	
+			  {% elif buildings  == "Theft Damage by Tenants Sum Insured - Buildings" %}
+			  Up To Buildings Sum Insured	
+
+
+			  {% endif %}
+
+			</td>
+			<td>
+			  {% if formdata['paymentshield_provider_details_buildings'][paymnt_buildings]['display'] == "yes" %}
+			  <img src="{{configurl}}defaqtoyes.png" width="17" alt="" border="0">
+			  {% elif formdata['paymentshield_provider_details_buildings'][paymnt_buildings]['display'] == "no" %}
+	
+			  <img src="{{configurl}}defaqtono.png" width="17" alt="" border="0">
+			  {% elif formdata['paymentshield_provider_details_buildings'][paymnt_buildings]['display'] == "optional" %}
+	
+			  <img src="{{configurl}}defaqtooptional.png" width="17" alt="" border="0">
+	{% endif %}
+	
+	
+			  {{formdata['paymentshield_provider_details_buildings'][paymnt_buildings]['answer']}}</td>
+              {% if formdata['current_provider'] != None %}
+
+        {% if "Paymentshield" not in formdata['current_provider'] %}
+
+			<td>
+			  {% if formdata['current_provider_details_buildings'][buildings]['display'] == "yes" %}
+			  <img src="{{configurl}}defaqtoyes.png" width="17" alt="" border="0">
+			  {% elif formdata['current_provider_details_buildings'][buildings]['display'] == "no" %}
+	
+			  <img src="{{configurl}}defaqtono.png" width="17" alt="" border="0">
+			  {% elif formdata['current_provider_details_buildings'][buildings]['display'] == "optional" %}
+	
+			  <img src="{{configurl}}defaqtooptional.png" width="17" alt="" border="0">
+	{% endif %}
+	
+	
+			  {{formdata['current_provider_details_buildings'][buildings]['answer']}}</td>
+              {% endif %}
+
+        {% endif %}
+
+		  </tr>
+		  {% endif %}
+	
+		  {% endfor %}
+		  {% endfor %}
+	{% else %}
+
+    {% for buildings in formdata['paymentshield_provider_details_buildings'] %}
+    <tr>
+      <td>{{buildings}}</td>
+      <td>
+        {% if buildings  == "Sum Insured Protection" %}
+        £500,000 Or More	
+        {% elif buildings  == "Alternative Accommodation" %}
+        £75,000 Or More	
+        {% elif buildings  == "Repairs Guarantee Period" %}
+        12 Months Or More	
+        {% elif buildings  == "Home Emergency Cover" %}
+        Optional
+        {% elif buildings  == "Home Emergency - Maximum Limit" %}
+        £1,000 Or More	
+        {% elif buildings  == "Buildings AD" %}
+        Optional
+        {% elif buildings  == "Trace and Access" %}
+        £5,000 Or More	
+        {% elif buildings  == "Burst Pipes" %}
+        Yes
+        {% elif buildings  == "Subsidence" %}
+        Standard
+        {% elif buildings  == "Blockage of Sewer Pipe" %}
+        Standard
+        {% elif buildings  == "Blockage of Sewer Pipe Sum Insured" %}
+        Up To Buildings Sum Insured	
+        {% elif buildings  == "Emergency Repairs Helpline" %}
+        Yes
+        {% elif buildings  == "Buildings Minimum Excess" %}
+        Less Than £100
+        {% elif buildings  == "Underground Services" %}
+        Standard
+        {% elif buildings  == "Glass Breakage" %}
+        Standard
+        {% elif buildings  == "Multiple Excess Applies" %}
+        No
+        {% elif buildings  == "Public Liability" %}
+        £2m Or More
+        {% elif buildings  == "Adjustment Fee" %}
+        £0	
+        {% elif buildings  == "Cancellation Fee" %}
+        £0
+        {% elif buildings  == "Loss of Rent" %}
+        Standard
+        {% elif buildings  == "Legal Helpline" %}
+        Yes
+        {% elif buildings  == "Trace and Acces" %}
+        £5,000 Or More	
+        {% elif buildings  == "Home Emergency Cove" %}
+        Optional	
+        {% elif buildings  == "Underground Services" %}
+        Standard	
+        {% elif buildings  == "Legal Expenses - Cover" %}
+        Optional	
+        {% elif buildings  == "Tree Felling or Loppin" %}
+        Yes
+        {% elif buildings  == "Loss of Rent Sum Insured" %}
+        £40,000 Or More	
+        {% elif buildings  == "Repairs Guarantee Period" %}
+        12 Months Or More	
+        {% elif buildings  == "Alternative Accommodation" %}
+        Standard
+        {% elif buildings  == "Property Owners Liability" %}
+        £2m Or More	
+        {% elif buildings  == "Contents - Accidental Damage" %}
+        Optional	
+        {% elif buildings  == "Buildings - Accidental Damage" %}
+        Optional	
+        {% elif buildings  == "Home Emergency - Maximum Limit" %}
+        £500 Or More	
+        {% elif buildings  == "Assumed Sum Insured (Buildings)" %}
+
+        {% elif buildings  == "Malicious Damage by Tenants (B)" %}
+        Standard	
+        {% elif buildings  == "Theft Damage by Tenants Buildings" %}
+        Standard	
+        {% elif buildings  == "Blockage of Sewer Pipe Sum Insured" %}
+        Up To Buildings Sum Insured	
+        {% elif buildings  == "Sum Insured Protection (Buildings)" %}
+        £500,000 Or More	
+        {% elif buildings  == "Legal Expenses - Maximum Indemnity Limit" %}
+        £100,000 Or More	
+        {% elif buildings  == "Alternative Accommodation Sum Insured (B)" %}
+        £40,000 Or More	
+        {% elif buildings  == "Malicious Damage by Tenants Sum Insured (B)" %}
+        Up To Buildings Sum Insured	
+        {% elif buildings  == "Theft Damage by Tenants Sum Insured - Buildings " %}
+        Up To Buildings Sum Insured	
+        {% elif buildings  == "Theft Damage by Tenants Sum Insured - Buildings" %}
+        Up To Buildings Sum Insured	
+
+
+        {% endif %}
+      </td>
+      <td>
+        {% if formdata['paymentshield_provider_details_buildings'][buildings]['display'] == "yes" %}
+        <img src="{{configurl}}defaqtoyes.png" width="17" alt="" border="0">
+        {% elif formdata['paymentshield_provider_details_buildings'][buildings]['display'] == "no" %}
+
+        <img src="{{configurl}}defaqtono.png" width="17" alt="" border="0">
+        {% elif formdata['paymentshield_provider_details_buildings'][buildings]['display'] == "optional" %}
+
+        <img src="{{configurl}}defaqtooptional.png" width="17" alt="" border="0">
+{% endif %}
+
+
+        {{formdata['paymentshield_provider_details_buildings'][buildings]['answer']}}</td>
+ 
+
+    </tr>
+
+    {% endfor %}
+    {% endif %}
+
+		</tbody>
+	  </table>
+	  <!-- Codes by Quackit.com -->
+									  
+							</tbody></table>
+	
+							<table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="full">
+								<tbody><tr>
+									<td width="100%" height="10" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+								</tr>
+							</tbody></table>
+	
+
+	{% endif %}
+	
+	
+	{% if current_provider_details_contents != [] %}
+	
+
+	
+										<table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" bgcolor="#ffffff" style="border-width: 1px; border-style: solid; border-color: #e6e6e6; background-color: #ffffff;width:900px;max-width:900px;margin-left:5px;" class="fullCenter">
+											<tbody><tr>
+												<td width="100%" height="25" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+											</tr>
+											<tr>
+												<td width="100%" align="center" class="pad20"  style="width:900px;max-width:900px;">
+	
+													<table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="full"  style="width:900px;max-width:900px;">
+														<tbody><tr>
+															<td width="100%" style="color: #3d3d3d; font-family: Helvetica, Arial, sans-serif, 'Questrial'; font-weight: 500; vertical-align: top; font-size: 20px; text-align: center; line-height: 24px;width:900px;max-width:900px;" class="questrial fullCenter">
+																Your Paymentshield Defaqto Comparison - Content Insurance
+															</td>
+														</tr>
+													</tbody></table>
+	
+												</td>
+											</tr>
+	
+	
+											<tr>
+												<td width="100%" height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+											</tr>
+	
+	
+						<!-- CSS Code: Place this code in the document's head (between the 'head' tags) -->
+	
+	  <!-- HTML Code: Place this code in the document's body (between the 'body' tags) where the table should appear -->
+	  <table class="table table-hover client-table order-table2   table-stripedmb-0" id="client-table" style="width:900px;max-width:900px;margin-left:5px;">
+		<thead class="thead-color">
+		  <tr>
+
+            {% if formdata['current_provider'] != None %}
+
+            {% if "Paymentshield" not in formdata['current_provider'] %}
+			<th style="width:680px;"> Product Features</th>
+			<th style="width:680px;"> Defaqto Benchmark</th>
+			<th style="width:680px;">Paymentshield </th>
+  
+			<th style="width:680px;">{{formdata['current_provider']}}</th>
+            {% else %}
+			<th style="width:700px;"> Product Features</th>
+			<th style="width:700px;"> Defaqto Benchmark</th>
+			<th style="width:700px;">Paymentshield </th>
+            {% endif %}
+            {% else %}
+			<th style="width:700px;"> Product Features</th>
+			<th style="width:700px;"> Defaqto Benchmark</th>
+			<th style="width:700px;">Paymentshield </th>
+        {% endif %}       
+
+		  </tr>
+		</thead>
+		<tbody>
+
+            {% if formdata['current_provider_details_contents'] != [] %}
+
+		  {% for contents in formdata['current_provider_details_contents'] %}
+		  {% for paymnt_contents in formdata['paymentshield_provider_details_contents'] %}
+		  {% if contents == paymnt_contents %}
+		  <tr>
+			<td>{{contents}}</td>
+			<td>
+			 
+			  {% if contents  == "Sum Insured Protection" %}
+			  £500,000 Or More	
+			  {% elif contents  == "Cover Level" %}
+			  New For Old	
+			  {% elif contents  == "Contents - Accidental Damage" %}
+			  Optional
+			  {% elif contents  == "Tech & Entertainment Equip Accidental Damage" %}
+			  Standard
+			  {% elif contents  == "Contents Minimum Excess" %}
+			  Less Than £100	
+			  {% elif contents  == "Valuables Inner Limit" %}
+			  £20,000 Or More	
+			  {% elif contents  == "Personal Possessions" %}
+			  Optional	
+			  {% elif contents  == "Legal Expenses - Cover" %}
+			  Optional
+			  {% elif contents  == "Legal Expenses - Maximum Indemnity Limit" %}
+			  £100,000 Or More	
+			  {% elif contents  == "Matching Items Cover" %}
+			  Restricted
+			  {% elif contents  == "Valuables Single Limit" %}
+			  £2,000 Or More	
+			  {% elif contents  == "Personal Liability" %}
+			  £2m Or More
+			  {% elif contents  == "Emergency Repairs Helpline" %}
+			  Yes	
+			  {% elif contents  == "Theft of Keys" %}
+			  £750 Or More	
+			  {% elif contents  == "Loss of Keys" %}
+			  £750 Or More	
+			  {% elif contents  == "Theft from Outbuildings" %}
+			  £1,500 Or More	
+			  {% elif contents  == "Multiple Excess Applies" %}
+			  No	
+			  {% elif contents  == "Adjustment Fee" %}
+			  £0	
+			  {% elif contents  == "Cancellation Fee" %}
+			  £0
+			  {% elif contents  == "Business Equipment - Sum Insured" %}
+			  £10,000 Or More	
+			  {% endif %}
+			</td>
+			<td>
+			  {% if formdata['paymentshield_provider_details_contents'][paymnt_contents]['display'] == "yes" %}
+			  <img src="{{configurl}}defaqtoyes.png" width="17" alt="" border="0">
+			  {% elif formdata['paymentshield_provider_details_contents'][paymnt_contents]['display'] == "no" %}
+	
+			  <img src="{{configurl}}defaqtono.png" width="17" alt="" border="0">
+			  {% elif formdata['paymentshield_provider_details_contents'][paymnt_contents]['display'] == "optional" %}
+	
+			  <img src="{{configurl}}defaqtooptional.png" width="17" alt="" border="0">
+	{% endif %}
+	
+	
+			  {{formdata['paymentshield_provider_details_contents'][paymnt_contents]['answer']}}</td>
+              {% if formdata['current_provider'] != None %}
+
+              {% if "Paymentshield" not in formdata['current_provider'] %}
+
+			  <td>
+	
+			  {% if formdata['current_provider_details_contents'][contents]['display'] == "yes" %}
+			  <img src="{{configurl}}defaqtoyes.png" width="17" alt="" border="0">
+			  {% elif formdata['current_provider_details_contents'][contents]['display'] == "no" %}
+	
+			  <img src="{{configurl}}defaqtono.png" width="17" alt="" border="0">
+			  {% elif formdata['current_provider_details_contents'][contents]['display'] == "optional" %}
+	
+			  <img src="{{configurl}}defaqtooptional.png" width="17" alt="" border="0">
+	{% endif %}
+	
+	
+			  {{formdata['current_provider_details_contents'][contents]['answer']}}</td>
+			  {% endif %}
+			  {% endif %}
+
+		  </tr>
+		  {% endif %}
+	
+		  {% endfor %}
+		  {% endfor %}
+	{% else %}
+    {% for contents in formdata['paymentshield_provider_details_contents'] %}
+
+    <tr>
+        <td>{{contents}}</td>
+        <td>
+         
+          {% if contents  == "Sum Insured Protection" %}
+          £500,000 Or More	
+          {% elif contents  == "Cover Level" %}
+          New For Old	
+          {% elif contents  == "Contents - Accidental Damage" %}
+          Optional
+          {% elif contents  == "Tech & Entertainment Equip Accidental Damage" %}
+          Standard
+          {% elif contents  == "Contents Minimum Excess" %}
+          Less Than £100	
+          {% elif contents  == "Valuables Inner Limit" %}
+          £20,000 Or More	
+          {% elif contents  == "Personal Possessions" %}
+          Optional	
+          {% elif contents  == "Legal Expenses - Cover" %}
+          Optional
+          {% elif contents  == "Legal Expenses - Maximum Indemnity Limit" %}
+          £100,000 Or More	
+          {% elif contents  == "Matching Items Cover" %}
+          Restricted
+          {% elif contents  == "Valuables Single Limit" %}
+          £2,000 Or More	
+          {% elif contents  == "Personal Liability" %}
+          £2m Or More
+          {% elif contents  == "Emergency Repairs Helpline" %}
+          Yes	
+          {% elif contents  == "Theft of Keys" %}
+          £750 Or More	
+          {% elif contents  == "Loss of Keys" %}
+          £750 Or More	
+          {% elif contents  == "Theft from Outbuildings" %}
+          £1,500 Or More	
+          {% elif contents  == "Multiple Excess Applies" %}
+          No	
+          {% elif contents  == "Adjustment Fee" %}
+          £0	
+          {% elif contents  == "Cancellation Fee" %}
+          £0
+          {% elif contents  == "Business Equipment - Sum Insured" %}
+          £10,000 Or More	
+          {% endif %}
+        </td>
+        <td>
+          {% if formdata['paymentshield_provider_details_contents'][contents]['display'] == "yes" %}
+          <img src="{{configurl}}defaqtoyes.png" width="17" alt="" border="0">
+          {% elif formdata['paymentshield_provider_details_contents'][contents]['display'] == "no" %}
+
+          <img src="{{configurl}}defaqtono.png" width="17" alt="" border="0">
+          {% elif formdata['paymentshield_provider_details_contents'][contents]['display'] == "optional" %}
+
+          <img src="{{configurl}}defaqtooptional.png" width="17" alt="" border="0">
+{% endif %}
+
+
+          {{formdata['paymentshield_provider_details_contents'][contents]['answer']}}</td>
+
+
+      </tr>	
+      {% endfor %}
+      {% endif %}
+
+</tbody>
+	  </table>
+	  <!-- Codes by Quackit.com -->
+	  
+									
+
+							</tbody></table>
+
+
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="full">
+                                <tbody><tr>
+                                    <td width="100%" valign="top" align="center">
+                            
+                                        <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="mobile">
+                                            <tbody><tr>
+                                                <td align="center">
+                            
+                                                    <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="full">
+                                                        <tbody><tr>
+                                                            <td width="100%" height="60" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                                        </tr>
+                                                    </tbody></table>
+                            
+                                                    <table width="100%" border="0" class="center" cellpadding="0" cellspacing="0" align="center" class="full">
+                                                        <tbody><tr>
+                                                            <td width="100%" align="center">
+
+				<img src="{{configurl}}defaqtoyes.png" width="17" alt=""  border="0"> - Meets or exceeds the level of cover selected<br>
+	
+				<img src="{{configurl}}defaqtooptional.png" width="17" alt="" border="0"> - Level of cover selected can be offered as an optional extra<br>
+	
+				<img src="{{configurl}}defaqtono.png" width="17" alt="" border="0">- Does not meet the level of cover selected<br>
+	
+							<table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="full">
+								<tbody><tr>
+									<td width="100%" height="10" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+								</tr>
+							</tbody></table>
+	
+	
+	
+						</td>
+					</tr>
+				</tbody></table>
+	
+			</td>
+		</tr>
+	</table>
+	</td>
+	</tr>
+	</tbody>
+	</table>
+	
+	{% endif %}
+	
+
+</body>
+</html>
