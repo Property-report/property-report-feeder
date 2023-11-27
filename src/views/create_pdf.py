@@ -1,6 +1,5 @@
 import pdfrw
 
-
 def fill_pdf(input_pdf_path, output, data_dict):
 
     ANNOT_KEY = '/Annots'
